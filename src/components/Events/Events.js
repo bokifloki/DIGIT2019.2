@@ -1,7 +1,8 @@
 
 import React from 'react';
 import styles from './Events.css'
-
+import Countdown from './CountdownTimer/Countdown'
+import Timer from 'react-compound-timer';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import img1 from './img.jpg';
 
@@ -54,7 +55,7 @@ const useStyles = makeStyles({
   },
   date: {
     margin: 0,
-    padding: "3% 3%"
+    padding: "1% 1%"
   }
 });
 
@@ -63,10 +64,25 @@ export default function Events() {
   const classes = useStyles();
   return (
     <div className={styles.mainDiv}>
+
       <Card className={classes.card}>
         <CardContent>
           <Typography className={classes.date} gutterBottom variant="h5" component="h2">
-            <h3 className={styles.date}>WED, OCT 7, 7:00 PM</h3>
+            <span className={styles.date}>
+              <Timer
+                initialTime={432000 * 1000}
+                direction="backward"
+              >
+                {() => (
+                  <React.Fragment>
+                    <Timer.Days /> <span>days </span>
+                    <Timer.Hours /> <span>hr. </span>
+                    <Timer.Minutes /> <span>min. </span>
+                    <Timer.Seconds /> <span>sec. until the event. </span>
+                  </React.Fragment>
+                )}
+              </Timer>
+            </span>
           </Typography>
 
           <div className={classes.location}>
