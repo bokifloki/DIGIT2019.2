@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import './Events.css'
+class Events extends Component {
+  render() {
+    return (
+        <div>
+            <h1 className="h1class">Events</h1>
+            <div className="eventContainer">
+                <div className="specificEvent">
+                    <p>
+                    test paragraph
+                    </p>
+                    <img alt="test">
+                    </img>
+                </div>
+            </div>
+        </div>
+    );
+}
 }
 
-export default App;
+
+export default Events;
