@@ -1,10 +1,10 @@
 
 import React from 'react';
 import styles from './Events.css'
-import Countdown from './CountdownTimer/Countdown'
 import Timer from 'react-compound-timer';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import img1 from './img.jpg';
+
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
