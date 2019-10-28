@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
-=======
     "@reach/router": "^1.2.1",
->>>>>>> 61d65216b847426427924e74ebcb6e53b02ac99a
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
