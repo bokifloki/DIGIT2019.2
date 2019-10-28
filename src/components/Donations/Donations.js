@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Donations.css";
+import "./Donations.css";
 function Donations() {
   const donationAmounts = [2, 5, 10, 20, 25, 50, 100, 120];
   return (
