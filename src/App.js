@@ -1,12 +1,12 @@
 import React from 'react';
-import Donations from './components/Donations/Donations'
-import './App.css';
+
+import SanoApp from './SanoApp'
 
 function App() {
   return (
-    <div className="App">
-     <Donations></Donations>
-    </div>
+    <>
+    <SanoApp />
+    </>
   );
 }
 
