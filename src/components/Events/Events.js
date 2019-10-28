@@ -20,7 +20,8 @@ const useStyles = makeStyles({
     fontFamily: 'sans-serif',
     display: 'flex',
     maxWidth: 1000,
-    backgroundColor: "lightgray"
+    backgroundColor: "lightgray",
+    borderRadius: "10px",
   },
   media: {
     height: 140,
@@ -41,11 +42,19 @@ const useStyles = makeStyles({
     display: 'flex'
   },
   icon: {
-    margin: 0,
+    marginLeft: "-15px",
     padding: 0,
+    height: "10%",
+    width: "10%",
+    color: "rgb(22, 134, 172)",
   },
   h3: {
-    marginBottom: "-100px"
+    marginBottom: "-100px",
+    color: "rgb(22, 134, 172)",
+  },
+  date: {
+    margin: 0,
+    padding: "3% 3%"
   }
 });
 
@@ -56,8 +65,8 @@ export default function Events() {
     <div className={styles.mainDiv}>
       <Card className={classes.card}>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            <h3>WED, OCT 7, 7:00 PM</h3>
+          <Typography className={classes.date} gutterBottom variant="h5" component="h2">
+            <h3 className={styles.date}>WED, OCT 7, 7:00 PM</h3>
           </Typography>
 
           <div className={classes.location}>
