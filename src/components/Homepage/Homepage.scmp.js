@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
     ${props => props.cHeight ? `height:${props.cHeight}px`: 'height:500px'}
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-size:contain;
     ${props => props.bgImg ?  `background: url(${props.bgImg}); `: null}
     position: relative;
@@ -40,4 +40,12 @@ export const CTAButton = styled.button`
     :hover{
         background-color: #70BBF7;
     }
+`
+
+export const H1 = styled.h1`
+padding: 10px;
+    background:${props => `url(${props.bgImg})`} ;
+    background-size: cover;
+    background-position: 90%;
+    background-repeat: no-repeat;
 `

@@ -2,30 +2,47 @@ import React from "react";
 import Icon from "react-icons-kit";
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
 
-import { HeroContainer, MessageContainer, CTAButton } from "./Homepage.scmp";
+import {
+  HeroContainer,
+  MessageContainer,
+  CTAButton,
+  H1
+} from "./Homepage.scmp";
 const illustration =
   "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/hero-large-27870530f60dba9eb6f828d938dda6f1.jpg";
 
 const people =
   "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/water-crisis-large-048145ec31eeb4be77749ea35680b6d3.jpg";
-function HeroImg({ src, alt }) {
+
+const sprite =
+  "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-saturn-5a8595e0d8f85155761f87bf3d8ef574.png";
+function HeroImg({ src, alt, linearGrad }) {
   const heroImgStyles = {
     width: "100%",
     height: "100%",
     objectFit: "cover"
   };
+
+  const heroLinearGradStyle = {
+    width: "100%",
+    height: "100%",
+    backgroundImage: linearGrad
+  };
+  if (linearGrad) {
+    return <div style={heroLinearGradStyle}></div>;
+  }
   return <img style={heroImgStyles} src={src} alt={alt}></img>;
 }
 
-function Message({ children }) {
-  return children();
+function Message({ content }) {
+  return content;
 }
 
-function Hero({ img, content, cHeight }) {
+function Hero({ img, content, cHeight, linearGrad }) {
   return (
     <HeroContainer cHeight={cHeight}>
-      <HeroImg src={img} alt="bgImg" />
-      <Message>{() => content}</Message>
+      <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />
+      <Message content={content} />
     </HeroContainer>
   );
 }
@@ -61,11 +78,13 @@ const Homepage = () => {
         }
       />
       <Hero
-        cHeight={800}
-        img={people}
+        cHeight={500}
+        linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
         content={
           <MessageContainer>
-            <h1>663 million people in the world live without clean water</h1>
+            <H1 bgImg={sprite}>
+              663 million people in the world live without clean water
+            </H1>
             <p>
               That’s nearly 1 in 10 people worldwide. Or, twice the population
               of the United States. The majority live in isolated rural areas
@@ -81,6 +100,12 @@ const Homepage = () => {
             </p>
           </MessageContainer>
         }
+      />
+
+      <Hero
+        cHeight={500}
+        img={people}
+        content={<MessageContainer></MessageContainer>}
       />
       <Explanation />
       <Testimonials />
