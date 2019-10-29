@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
-    height: 718px;
+    ${props => props.cHeight ? `height:${props.cHeight}px`: 'height:500px'}
     border: 1px solid red;
     background-size:contain;
     ${props => props.bgImg ?  `background: url(${props.bgImg}); `: null}
@@ -25,12 +25,17 @@ export const MessageContainer = styled.div`
 export const CTAButton = styled.button`
     padding: 10px 14px;
     background-color: #369ff4;
-    font-size:15px;
+    font-size:18px;
     text-transform: uppercase;
     border:none;
     border-radius: 4px;
     cursor: pointer;
     outline: none;
+
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+
 
     :hover{
         background-color: #70BBF7;
