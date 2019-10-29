@@ -69,15 +69,6 @@ const useStyles = makeStyles({
   }
 });
 
-// const mobileStyles = {
-//   widthTest: {
-//     flexFlow: "column",
-//     ['@media (min-width:600px)']: {
-//       flexFlow: "row wrap",
-//     }
-//   }
-// }
-
 const ColorButton = withStyles(theme => ({
   root: {
     color: theme.palette.getContrastText("rgb(22, 134, 172)"),
@@ -99,7 +90,6 @@ export default function Event() {
         elevation={test}
         id="mobile"
         className={classes.card}
-        // style={mobileStyles.widthTest}
       >
         <CardContent>
           <Typography
@@ -123,7 +113,10 @@ export default function Event() {
           </Typography>
           <h4>Event name: </h4>
           <div className={classes.location}>
-            <LocationOnIcon style={{paddingLeft: "8px"}} className={classes.icon}></LocationOnIcon>
+            <LocationOnIcon
+              style={{ paddingLeft: "8px" }}
+              className={classes.icon}
+            ></LocationOnIcon>
             <h3>Cafe bar</h3>
           </div>
 

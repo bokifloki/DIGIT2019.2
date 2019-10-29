@@ -11,7 +11,7 @@ h3 {
   #mobile {
     font-family: sans-serif;
     display: flex;
-    flex-flow:  row nowrap;
+    flex-flow: row nowrap;
     background-color: rgb(250, 250, 250);
     border-radius: 10px;
   }
