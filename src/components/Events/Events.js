@@ -1,14 +1,63 @@
-import React from 'react';
-import './Events.css'
+import React from "react";
+import Event from "./Event/Event";
+
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  card: {
+    height: "100%",
+    width: "100%",
+    objectFit: "cover",
+    borderRadius: "4px"
+  },
+  event: {
+    margin: "100px"
+  }
+});
+
+// const styles = {
+//   margin: "10px",
+// }
+
+// const container = {
+//   position: "relative",
+//   top: "10%",
+//   left: "50px",
+//   width: "85%"
+// }
+
+const styles = {
+  display: "table",
+  margin: "0 auto"
+};
+
+const container = {
+  padding: "5%",
+  paddingBottom: "5%", 
+  backgroundColor: "lightgray"
+}
+
+const mainDiv = {
+  backgroundColor: "lightgray"
+}
 
 export default function Events() {
+  const classes = useStyles();
   return (
-    <div className="mainDiv">
-        <h3>WED, OCT 7, 7:00 PM</h3>
-        <div className="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis recusandae, inventore, officiis obcaecati assumenda veniam eius saepe esse provident eligendi animi magni natus illum optio. Earum ratione enim dolores. Nam mollitia, dolorem qui molestias, hic placeat, ducimus quibusdam ratione culpa a deserunt. Odio mollitia, recusandae maiores esse rem quo qui!
-
-        </div>
+    <div style={mainDiv}>
+    <div style={container}>
+      <div style={styles}>
+        <Event></Event>
+      </div>
+      <br></br>
+      <div style={styles}>
+        <Event></Event>
+      </div>
+      <br></br>
+      <div style={styles}>
+        <Event></Event>
+      </div>
+    </div>
     </div>
   );
 }

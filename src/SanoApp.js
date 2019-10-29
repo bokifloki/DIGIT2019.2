@@ -6,7 +6,6 @@ import Homepage from './components/Homepage/Homepage'
 import Events from './components/Events/Events'
 import Donations from './components/Donations/Donations'
 
-
 const PageNotFound = () => "Page doesnt exist";
 const SanoApp = () => {
   return (
@@ -17,7 +16,7 @@ const SanoApp = () => {
         <Homepage path='/' />
         {/* <AboutUs /> */}
         <Events path="events" />
-        <Donations path="donations" />
+        <Donations path="donate" />
         <PageNotFound default />
       </Router>
     </>
