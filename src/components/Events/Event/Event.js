@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   card: {
     fontFamily: "sans-serif",
     display: "flex",
-    maxWidth: "80%",
+    // maxWidth: "100%",
     backgroundColor: "rgb(236, 236, 236)",
     borderRadius: "10px"
   },
