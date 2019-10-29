@@ -5,6 +5,8 @@ import * as Yup from 'yup';
 class ContactUs extends React.Component {
     render() {
         return (
+            <div
+            style={{padding: "10%"}}>
             <Formik
                 initialValues={{
                     firstName: '',
@@ -48,12 +50,12 @@ class ContactUs extends React.Component {
                             <ErrorMessage name="lastName" component="div" className="invalid-feedback" />
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary mr-2">Register</button>
-                            <button type="reset" className="btn btn-secondary">Reset</button>
+                            <button type="submit" className="btn btn-primary mr-2">Send Message</button>
                         </div>
                     </Form>
                 )}
             />
+            </div>
         )
     }
 }
