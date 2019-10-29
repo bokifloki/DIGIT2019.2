@@ -80,14 +80,14 @@ const ColorButton = withStyles(theme => ({
 }))(Button);
 
 export default function Event() {
-  const [test, setTest] = useState(2);
+  const [elevation, setEventlevation] = useState(2);
   const classes = useStyles();
   return (
     <div className={styles.mainDiv}>
       <Card
-        onMouseEnter={() => setTest(test + 5)}
-        onMouseLeave={() => setTest(test - 5)}
-        elevation={test}
+        onMouseEnter={() => setEventlevation(elevation + 5)}
+        onMouseLeave={() => setEventlevation(elevation - 5)}
+        elevation={elevation}
         id="mobile"
         className={classes.card}
       >
