@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   card: {
     fontFamily: "sans-serif",
     display: "flex",
-    // maxWidth: "100%",
+    flexFlow: "row wrap",
     backgroundColor: "rgb(250, 250, 250)",
     borderRadius: "10px"
   },
@@ -69,15 +69,23 @@ const useStyles = makeStyles({
   }
 });
 
+// const mobileStyles = {
+//   widthTest: {
+//     flexFlow: "column",
+//     ['@media (min-width:600px)']: {
+//       flexFlow: "row wrap",
+//     }
+//   }
+// }
 
 const ColorButton = withStyles(theme => ({
   root: {
     color: theme.palette.getContrastText("rgb(22, 134, 172)"),
     backgroundColor: "rgb(22, 134, 172)",
-    '&:hover': {
-      backgroundColor: "rgb(23, 140, 179)",
-    },
-  },  
+    "&:hover": {
+      backgroundColor: "rgb(23, 140, 179)"
+    }
+  }
 }))(Button);
 
 export default function Event() {
@@ -89,7 +97,9 @@ export default function Event() {
         onMouseEnter={() => setTest(test + 5)}
         onMouseLeave={() => setTest(test - 5)}
         elevation={test}
+        id="mobile"
         className={classes.card}
+        // style={mobileStyles.widthTest}
       >
         <CardContent>
           <Typography
@@ -111,10 +121,10 @@ export default function Event() {
               </Timer>
             </span>
           </Typography>
-
+          <h4>Event name: </h4>
           <div className={classes.location}>
-            <LocationOnIcon className={classes.icon}></LocationOnIcon>
-            <h3 classname={classes.h3}>Cafe bar</h3>
+            <LocationOnIcon style={{paddingLeft: "8px"}} className={classes.icon}></LocationOnIcon>
+            <h3>Cafe bar</h3>
           </div>
 
           <div className={styles.container}>
