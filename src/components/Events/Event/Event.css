@@ -7,9 +7,12 @@ h3 {
   padding: 5px;
 }
 
-@media screen and (min-width: 600px) {
-  .mobile {
-    -webkit-flex-direction: row;
-    flex-direction: row;
+@media (min-width: 800px) {
+  #mobile {
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
   }
 }
