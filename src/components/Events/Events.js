@@ -32,13 +32,19 @@ const styles = {
 };
 
 const container = {
-  margin: "5%",
-  marginBottom: "5%"
-};
+  padding: "5%",
+  paddingBottom: "5%", 
+  backgroundColor: "lightgray"
+}
+
+const mainDiv = {
+  backgroundColor: "lightgray"
+}
 
 export default function Events() {
   const classes = useStyles();
   return (
+    <div style={mainDiv}>
     <div style={container}>
       <div style={styles}>
         <Event></Event>
@@ -51,6 +57,7 @@ export default function Events() {
       <div style={styles}>
         <Event></Event>
       </div>
+    </div>
     </div>
   );
 }

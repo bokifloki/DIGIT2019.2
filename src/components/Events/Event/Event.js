@@ -6,7 +6,7 @@ import img1 from "./img.jpg";
 
 import { shadows } from "@material-ui/system";
 import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     fontFamily: "sans-serif",
     display: "flex",
     // maxWidth: "100%",
-    backgroundColor: "rgb(236, 236, 236)",
+    backgroundColor: "rgb(250, 250, 250)",
     borderRadius: "10px"
   },
   media: {
@@ -61,8 +61,24 @@ const useStyles = makeStyles({
     "&:hover": {
       backgroundColor: "white"
     }
+  },
+  button: {
+    marginTop: "5%",
+    marginBottom: "5%",
+    backgroundColor: "rgb(22, 134, 172)"
   }
 });
+
+
+const ColorButton = withStyles(theme => ({
+  root: {
+    color: theme.palette.getContrastText("rgb(22, 134, 172)"),
+    backgroundColor: "rgb(22, 134, 172)",
+    '&:hover': {
+      backgroundColor: "rgb(23, 140, 179)",
+    },
+  },  
+}))(Button);
 
 export default function Event() {
   const [test, setTest] = useState(2);
@@ -109,6 +125,13 @@ export default function Event() {
             placeat, ducimus quibusdam ratione culpa a deserunt. Odio mollitia,
             recusandae maiores esse rem quo qui!
           </div>
+          <ColorButton
+            variant="contained"
+            color="secondary"
+            className={classes.button}
+          >
+            Join the event
+          </ColorButton>
         </CardContent>
         <div className={classes.imgDiv}>
           <img src={img1} className={classes.img}></img>
