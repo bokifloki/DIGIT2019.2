@@ -7,6 +7,9 @@
     "@material-ui/icons": "^4.5.1",
     "@reach/router": "^1.2.1",
     "formik": "^2.0.3",
+    "jquery": "^3.4.1",
+    "mdbootstrap": "^4.8.11",
+    "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-compound-timer": "^1.1.15",
     "react-dom": "^16.11.0",
@@ -35,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2"
   }
 }
