@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "mdbootstrap/css/mdb.min.css";
+import "mdbootstrap/js/mdb.min.js";
 import "./index.css";
+import "jquery/dist/jquery.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 ReactDOM.render(
