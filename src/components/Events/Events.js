@@ -4,28 +4,6 @@ import Event from "./Event/Event";
 import { makeStyles } from "@material-ui/core/styles";
 import eventImage from "./Event/img.jpg";
 
-const useStyles = makeStyles({
-  card: {
-    height: "100%",
-    width: "100%",
-    objectFit: "cover",
-    borderRadius: "4px"
-  },
-  event: {
-    margin: "100px"
-  }
-});
-
-// const styles = {
-//   margin: "10px",
-// }
-// const container = {
-//   position: "relative",
-//   top: "10%",
-//   left: "50px",
-//   width: "85%"
-// }
-
 const styles = {
   display: "table",
   margin: "0 auto"
