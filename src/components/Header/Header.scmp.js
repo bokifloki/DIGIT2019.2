@@ -40,7 +40,7 @@ export const NavBarContainer = styled.nav`
   align-items: center;
 
   .surround {
-    @media (max-width: 930px) {
+    @media (max-width: 960px) {
       display: none;
     }
   }
@@ -61,7 +61,7 @@ export const LogoContainer = styled.div`
 
 export const HamburgerContainer = styled.div`
   display: none;
-  @media (max-width: 930px) {
+  @media (max-width: 960px) {
     display: block;
   }
 `;
