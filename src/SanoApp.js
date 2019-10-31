@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage/Homepage";
 import Events from "./components/Events/Events";
 import Donations from "./components/Donations/Donations";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Volunteer from "./components/Volunteer/Volunteer";
 import ContactUs from "./components/ContactUs/ContactUs";
 
 const PageNotFound = () => "Page doesnt exist";
@@ -16,17 +17,11 @@ const SanoApp = () => {
 
       <Router>
         <Homepage path="/" />
-<<<<<<< HEAD
         {/* <AboutUs /> */}
         <Events path="events" />
         <Donations path="donations" />
         <ContactUs path="contact-us" />
         <Volunteer path="volunteer" />
-=======
-        <AboutUs path="about-us" />
-        <Events path="events" />
-        <Donations path="donate" />
->>>>>>> master
         <PageNotFound default />
       </Router>
     </>
