@@ -8,6 +8,7 @@ import { heart } from "react-icons-kit/ikons/heart";
 import SanoButton from "../SanoButton/SanoButton";
 
 const FooterContainer = styled.footer`
+  background-color: #eee;
   height: 240px;
   display: flex;
   flex-direction: column;
