@@ -22,7 +22,14 @@ function Message({ content }) {
   return content;
 }
 
-export default function Hero({ img, content, cHeight, linearGrad, bgColor, horisontalPosition}) {
+export default function Hero({
+  img,
+  linearGrad,
+  bgColor,
+  content,
+  cHeight,
+  horisontalPosition
+}) {
   return (
     <HeroContainer cHeight={cHeight} bgColor={bgColor}>
       <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />
