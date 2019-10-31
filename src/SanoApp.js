@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import Events from "./components/Events/Events";
 import Donations from "./components/Donations/Donations";
@@ -14,16 +14,16 @@ const SanoApp = () => {
   return (
     <>
       <Header />
-
       <Router>
         <Homepage path="/" />
         <AboutUs path="about-us"/>
-        <Events path="events" />
+        <Events path="projects" />
         <Donations path="donate" />
         <ContactUs path="contact-us" />
         <Volunteer path="volunteer" />
         <PageNotFound default />
       </Router>
+      <Footer />
     </>
   );
 };
