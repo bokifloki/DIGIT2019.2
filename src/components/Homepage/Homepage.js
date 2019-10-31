@@ -5,9 +5,9 @@ import { picture } from "react-icons-kit/ikons/picture";
 import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
+import Hero from '../Hero/Hero'
 
 import {
-  HeroContainer,
   MessageContainer,
   CTAButton,
   TestimonialsContainer,
@@ -27,38 +27,9 @@ const sprite =
 const sprite2 =
   "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-mars-cec3617ae7bd18a8baf716974ea51ca2.png";
 
-function HeroImg({ src, alt, linearGrad }) {
-  const heroImgStyles = {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover"
-  };
-
-  const heroLinearGradStyle = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: linearGrad
-  };
-  if (linearGrad) {
-    return <div style={heroLinearGradStyle}></div>;
-  }
-  return <img style={heroImgStyles} src={src} alt={alt}></img>;
-}
 // function SanoButton() {
 //   return <button>Learn More</button>;
 // }
-function Message({ content }) {
-  return content;
-}
-
-function Hero({ img, content, cHeight, linearGrad }) {
-  return (
-    <HeroContainer cHeight={cHeight}>
-      <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />
-      <Message content={content} />
-    </HeroContainer>
-  );
-}
 
 function ShortAboutUs() {
   return <div></div>;
