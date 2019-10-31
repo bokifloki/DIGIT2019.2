@@ -6,6 +6,7 @@ import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import Hero from "../Hero/Hero";
+import Map from "../Map/Map";
 import HeroSplit from "../HeroSplit/HeroSplit";
 import { MessageContainer } from "../Hero/Hero.scmp";
 import {
@@ -59,7 +60,7 @@ function Testimonials({ testimonials }) {
   return (
     <TestimonialsContainer>
       {testimonials.map(testimonial => (
-        <Testimonial testimonial={testimonial} />
+        <Testimonial key={testimonial.title} testimonial={testimonial} />
       ))}
     </TestimonialsContainer>
   );
@@ -178,6 +179,7 @@ const Homepage = () => {
           </>
         }
       />
+      <Map />
       <Explanation />
       <ShortAboutUs />
     </>
