@@ -33,31 +33,39 @@ const styles = {
 
 const container = {
   padding: "5%",
-  paddingBottom: "5%", 
+  paddingBottom: "5%",
   backgroundColor: "lightgray"
-}
+};
 
 const mainDiv = {
   backgroundColor: "lightgray"
-}
+};
+
+const header = {
+  fontFamily: "sans-serif",
+  color: "rgb(83, 75, 75)",
+  textAlign: "center"
+};
 
 export default function Events() {
   const classes = useStyles();
   return (
     <div style={mainDiv}>
-    <div style={container}>
-      <div style={styles}>
-        <Event></Event>
+      <div style={container}>
+        <h2 style={header}>Upcoming and past events</h2>
+        <br></br>
+        <div style={styles}>
+          <Event></Event>
+        </div>
+        <br></br>
+        <div style={styles}>
+          <Event></Event>
+        </div>
+        <br></br>
+        <div style={styles}>
+          <Event></Event>
+        </div>
       </div>
-      <br></br>
-      <div style={styles}>
-        <Event></Event>
-      </div>
-      <br></br>
-      <div style={styles}>
-        <Event></Event>
-      </div>
-    </div>
     </div>
   );
 }

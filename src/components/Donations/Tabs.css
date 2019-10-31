@@ -10,7 +10,7 @@
     padding: 0;
     margin-bottom: 25px;
     padding: 0;
-    background-color:;
+    /* width: 100%; */
   }
   
   .react-tabs__tab {
@@ -24,7 +24,7 @@
     border: 1px solid  #369ff4;
     border-radius: 7px;
     margin: 0px;
-    width: 41%;
+    width: 50%;
     font-weight: bold;
     font-size: 13px;
     text-align: center;

@@ -13,7 +13,7 @@ export const Link = styled(OriginalLink)`
   letter-spacing: 0.9px;
 
   ${props =>
-    props.border ? `border: 1px solid #333232; border-radius:4px; ` : null}
+    props.border ? `border: 1px solid #333232; border-radius:4px; padding: 8px 10px` : null}
   ${props =>
     props.marginright ? `margin-right: ${props.marginright}px` : null}
 
@@ -25,8 +25,10 @@ export const Link = styled(OriginalLink)`
 `;
 
 export const HeaderContainer = styled.div`
+  position: absolute;
+  width: 99.9%;
+  z-index: 30;
   height: 60px;
-  border: 1px solid gray;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -88,7 +90,7 @@ export const SideBarContainer = styled.div`
     height: 35px;
     color: black;
     font-size: 34px;
-    cursor:pointer;
+    cursor: pointer;
   }
 
   .linksContainer {
