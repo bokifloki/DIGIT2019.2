@@ -15,6 +15,8 @@ export const MessageContainer = styled.div`
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
+  box-sizing: border-box;
+  min-width:430px;
 
   ${props =>
     props.horisontalPosition === "left"
@@ -31,6 +33,24 @@ export const MessageContainer = styled.div`
       top: 40%;
       left: 70%;
       transform: translate(-70%, -40%);
+  `
+      : null}
+
+      ${props =>
+    props.horisontalPosition === "rightMost"
+      ? `
+      top: 40%;
+      left: 85%;
+      transform: translate(-85%, -40%);
+  `
+      : null}
+
+      ${props =>
+    props.horisontalPosition === "leftMost"
+      ? `
+      top: 40%;
+      left: 15%;
+      transform: translate(-15%, -40%);
   `
       : null}
 
