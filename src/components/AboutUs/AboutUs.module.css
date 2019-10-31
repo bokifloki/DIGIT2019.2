@@ -25,3 +25,16 @@
   .aboutFirstHeroContent h1{
       margin-top: 80px;
   }
+
+
+  .thirdContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 90px auto;
+  }
+  
+ 
