@@ -1,0 +1,19 @@
+ 
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 90px auto;
+  }
+  .squares {
+    width: 23%;
+    margin-right: 20px;
+  }
+  
+  .squares img {
+    max-width: 50%;
+    max-height: 50%;
+  }
