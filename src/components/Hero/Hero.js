@@ -16,13 +16,14 @@ function HeroImg({ src, alt, linearGrad }) {
   if (linearGrad) {
     return <div style={heroLinearGradStyle}></div>;
   }
-  return <img style={heroImgStyles} src={src} alt={alt}></img>;
+  return <img style={heroImgStyles} src={src} alt={""}></img>;
 }
 function Message({ content }) {
   return content;
 }
 
 export default function Hero({
+  noBg,
   img,
   linearGrad,
   bgColor,
@@ -32,7 +33,7 @@ export default function Hero({
 }) {
   return (
     <HeroContainer cHeight={cHeight} bgColor={bgColor}>
-      <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />
+      {!noBg && <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />}
       <MessageContainer horisontalPosition={horisontalPosition}>
         <Message content={content} />
       </MessageContainer>
