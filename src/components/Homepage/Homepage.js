@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import content from '../../utils/content'
 import Hero from "../Hero/Hero";
 import Map from "../Map/Map";
@@ -8,21 +8,23 @@ import StatisticInformation from "./components/StatisticInformation";
 import TestimonialContent from "./components/TestimonialContent";
 
 const Homepage = () => {
-  const homepageContent = content.homepage
+
+  const [language, setLanguage] = useState('eng');
+
+  const homepageContent = content[language].homepage
+
   const {testimonialContent, statisticInformation, welcomeContent,} = homepageContent
   const {illustration, people} = homepageContent.resources.images
 
+
   return (
     <>
+      
       <Hero img={illustration} cHeight={600} content={<WelcomeContent content={welcomeContent} />}/>
-      <HeroSplit
-        cHeight={500} 
-        leftContent={<>Hello</>}
-        rightContent={<>Goodbye</>}
-        lhp="rightMost"
-        rhp="leftMost"
-        img={illustration}
-      />
+      <div>
+        <button onClick={()=>{setLanguage('eng'); console.log('clicked')}} >Angliski</button>
+        <button onClick={()=>setLanguage('mk')}> Makedonski</button>
+      </div>
       <Hero
         cHeight={500}
         linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
