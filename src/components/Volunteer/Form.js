@@ -29,22 +29,16 @@ function FormModule() {
             style={{
               marginBottom: "0px",
               backgroundImage:
-                "linear-gradient(rgb(235, 234, 214), rgb(168, 185, 181))"
+                "linear-gradient(rgb(168, 185, 181), rgb(235, 234, 214))"
             }}
           >
             <section
-              className="mb-4"
+              className=""
               style={{ padding: "20%", paddingTop: "50px" }}
             >
               <h2 className="h1-responsive font-weight-bold text-center my-4">
-                Волонтирај
+                Пријави се
               </h2>
-
-              <p className="text-center w-responsive mx-auto mb-5">
-                Do you have any questions? Please do not hesitate to contact us
-                directly. Our team will come back to you within a matter of
-                hours to help you.
-              </p>
 
               <div className="row">
                 <div className="col-md-9 mb-md-0 mb-5">
@@ -56,6 +50,7 @@ function FormModule() {
                           <Field
                             name="fullName"
                             type="text"
+                            style={{ color: "red" }}
                             className={
                               "form-control" +
                               (errors.fullName && touched.fullName

@@ -64,45 +64,19 @@ const Volunteer = () => {
   return (
     <>
       <Hero
-        img={illustration}
-        content={
-          <MessageContainer>
-            <h1>Сакам да волонтирам</h1>
-            <p>
-              For people in developing countries, clean water can change
-              everything.
-            </p>
-            <CTAButton>
-              <Icon icon={playCircleO} size={20}></Icon> Watch our video
-            </CTAButton>
-          </MessageContainer>
-        }
-      />
-      <FormModule></FormModule>
-      <Hero
-        cHeight={500}
+        style={{ paddingTop: "60px" }}
+        cHeight={250}
         linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
         content={
           <MessageContainer>
-            <H1 bgImg={sprite}>
-              663 million people in the world live without clean water
-            </H1>
-            <p>
-              That’s nearly 1 in 10 people worldwide. Or, twice the population
-              of the United States. The majority live in isolated rural areas
-              and spend hours every day walking to collect water for their
-              family. Not only does walking for water keep children out of
-              school or take up time that parents could be using to earn money,
-              but the water often carries diseases that can make everyone sick.
-            </p>
-            <br />
-            <p>
-              But access to clean water means education, income and health -
-              especially for women and kids.
-            </p>
+            <h1>Сакам да волонтирам</h1>
+            <p>Зошто да волонтирам.</p>
           </MessageContainer>
         }
       />
+      <div>
+        <FormModule></FormModule>
+      </div>
 
       <Hero
         cHeight={500}

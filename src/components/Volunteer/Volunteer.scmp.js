@@ -9,6 +9,7 @@ export const HeroContainer = styled.div`
 `;
 
 export const MessageContainer = styled.div`
+  padding-top: 100px;
   position: absolute;
   text-align: center;
   top: 40%;
