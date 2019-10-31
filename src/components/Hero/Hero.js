@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroContainer } from "./Hero.scmp";
+import { HeroContainer, MessageContainer } from "./Hero.scmp";
 
 function HeroImg({ src, alt, linearGrad }) {
   const heroImgStyles = {
@@ -22,11 +22,13 @@ function Message({ content }) {
   return content;
 }
 
-export default function Hero({ img, content, cHeight, linearGrad }) {
+export default function Hero({ img, content, cHeight, linearGrad, bgColor, horisontalPosition}) {
   return (
-    <HeroContainer cHeight={cHeight}>
+    <HeroContainer cHeight={cHeight} bgColor={bgColor}>
       <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />
-      <Message content={content} />
+      <MessageContainer horisontalPosition={horisontalPosition}>
+        <Message content={content} />
+      </MessageContainer>
     </HeroContainer>
   );
 }

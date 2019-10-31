@@ -1,19 +1,6 @@
 import styled from "styled-components";
 
-
-
-export const MessageContainer = styled.div`
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  font-family: "Roboto", sans-serif;
-
-  p {
-    font-size: 23px;
-  }
-`;
+ 
 
 export const CTAButton = styled.button`
   padding: 10px 14px;

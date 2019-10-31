@@ -5,10 +5,9 @@ import { picture } from "react-icons-kit/ikons/picture";
 import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
-import Hero from '../Hero/Hero'
-
+import Hero from "../Hero/Hero";
+import { MessageContainer } from "../Hero/Hero.scmp";
 import {
-  MessageContainer,
   CTAButton,
   TestimonialsContainer,
   TestimonialContainer,
@@ -27,10 +26,6 @@ const sprite =
 const sprite2 =
   "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-mars-cec3617ae7bd18a8baf716974ea51ca2.png";
 
-// function SanoButton() {
-//   return <button>Learn More</button>;
-// }
-
 function ShortAboutUs() {
   return <div></div>;
 }
@@ -43,7 +38,11 @@ function Testimonial({ testimonial }) {
   return (
     <TestimonialContainer>
       <div className="iconContainer">
-        <Icon icon={testimonial.icon} style={{color: testimonial.color}} size={30} />
+        <Icon
+          icon={testimonial.icon}
+          style={{ color: testimonial.color }}
+          size={30}
+        />
       </div>
       <div className="textContainer">
         <h3>{testimonial.title}</h3>
@@ -113,7 +112,7 @@ const Homepage = () => {
         img={illustration}
         cHeight={600}
         content={
-          <MessageContainer>
+          <>
             <h1>Why Water?</h1>
             <p>
               For people in developing countries, clean water can change
@@ -122,15 +121,16 @@ const Homepage = () => {
             <CTAButton>
               <Icon icon={playCircleO} size={20}></Icon> Watch our video
             </CTAButton>
-          </MessageContainer>
+          </>
         }
       />
       <Hero
         koloni={true}
         cHeight={500}
         linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
+        horisontalPosition="center"
         content={
-          <MessageContainer>
+          <>
             <H1 bgImg={sprite}>
               663 million people in the world live without clean water
             </H1>
@@ -147,7 +147,7 @@ const Homepage = () => {
               But access to clean water means education, income and health -
               especially for women and kids.
             </p>
-          </MessageContainer>
+          </>
         }
       />
 
@@ -161,11 +161,13 @@ const Homepage = () => {
         cHeight={996}
         linearGrad={"linear-gradient(#c9a77e,#c3e0dc)"}
         content={
-          <MessageContainer>
+          <>
             <H1 bgImg={sprite2}>Your can have a huge impact</H1>
             <Testimonials testimonials={testimonials} />
-            <SanoButton position="left" variant="hollow" zoomIn={true} > Learn More </SanoButton>
-          </MessageContainer>
+            <SanoButton position="left" variant="hollow" zoomIn={true}>
+              Learn More
+            </SanoButton>
+          </>
         }
       />
       <Explanation />
