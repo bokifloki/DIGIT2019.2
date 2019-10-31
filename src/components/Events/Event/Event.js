@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Event.css";
 import Timer from "react-compound-timer";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import img1 from "./img.jpg";
+import moment from "moment";
 
 import { shadows } from "@material-ui/system";
 import Box from "@material-ui/core/Box";
@@ -79,14 +80,25 @@ const ColorButton = withStyles(theme => ({
   }
 }))(Button);
 
-export default function Event() {
+export default function Event({ event }) {
   const [elevation, setEventlevation] = useState(2);
+  const [difference, setDifference] = useState(0);
   const classes = useStyles();
+  const date = event.date;
+  const momentDate = moment(date);
+  const momentMiliseconds = momentDate.valueOf();
+
+  useEffect(() => {
+    const dateNow = moment().valueOf();
+    const diff = momentMiliseconds - dateNow;
+    setDifference(diff);
+  }, [event.date]);
+
   return (
     <div className={styles.mainDiv}>
       <Card
-        onMouseEnter={() => setEventlevation(elevation + 5)}
-        onMouseLeave={() => setEventlevation(elevation - 5)}
+        onMouseEnter={() => setEventlevation(7)}
+        onMouseLeave={() => setEventlevation(2)}
         elevation={elevation}
         id="mobile"
         className={classes.card}
@@ -98,36 +110,33 @@ export default function Event() {
             variant="h5"
             component="h2"
           >
-            <span className={styles.date}>
-              <Timer initialTime={432000 * 1000} direction="backward">
-                {() => (
-                  <React.Fragment>
-                    <Timer.Days /> <span>days </span>
-                    <Timer.Hours /> <span>hr. </span>
-                    <Timer.Minutes /> <span>min. </span>
-                    <Timer.Seconds /> <span>sec. until the event. </span>
-                  </React.Fragment>
-                )}
-              </Timer>
-            </span>
+            <div className={styles.date}>
+              {difference > 0 ? (
+                <Timer initialTime={difference} direction="backward">
+                  {() => (
+                    <React.Fragment>
+                      <Timer.Days /> <span>days </span>
+                      <Timer.Hours /> <span>hr. </span>
+                      <Timer.Minutes /> <span>min. </span>
+                      <Timer.Seconds /> <span>sec. until the event. </span>
+                    </React.Fragment>
+                  )}
+                </Timer>
+              ) : (
+                <div> {event.date} </div>
+              )}
+            </div>
           </Typography>
-          <h4>Event name: </h4>
+          <h4>Event title:{event.title} </h4>
           <div className={classes.location}>
             <LocationOnIcon
               style={{ paddingLeft: "8px" }}
               className={classes.icon}
             ></LocationOnIcon>
-            <h3>Cafe bar</h3>
+            <h3>{event.location}</h3>
           </div>
 
-          <div className={styles.container}>
-            Lorem ipsum dolor sit amet coectetur adipisicing elit. Facilis
-            recusandae, inventore, officiis obcaecati assumenda veniam eius
-            saepe esse provident eligendi animi magni natus illum optio. Earum
-            ratione enim dolores. Nam mollitia, dolorem qui molestias, hic
-            placeat, ducimus quibusdam ratione culpa a deserunt. Odio mollitia,
-            recusandae maiores esse rem quo qui!
-          </div>
+          <div className={styles.container}>{event.overview}</div>
           <ColorButton
             variant="contained"
             color="secondary"

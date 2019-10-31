@@ -112,7 +112,7 @@
   text-align: center;
 }
 
-button {
+/* button {
   margin: 3px;
   min-width: 120px;
   height: 45px;
@@ -120,9 +120,10 @@ button {
   border-radius: 7px;
   border: none;
   background-color:rgb(252, 241, 241); 
-  color: #9b9b94;
+  color: white;
+  font-weight: 500;
   border: 1px solid #9b9b94;
-}
+} */
 
 button:hover {
   background-color:#369ff4; 
