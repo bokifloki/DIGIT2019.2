@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-function ContactUS() {
+function Volunteer() {
   return (
     <>
       <Formik
@@ -30,7 +30,7 @@ function ContactUS() {
             style={{ padding: "20%", paddingTop: "50px" }}
           >
             <h2 className="h1-responsive font-weight-bold text-center my-4">
-              Contact us
+              Волонтирај
             </h2>
 
             <p className="text-center w-responsive mx-auto mb-5">
@@ -174,4 +174,4 @@ function ContactUS() {
   );
 }
 
-export default ContactUS;
+export default Volunteer;
