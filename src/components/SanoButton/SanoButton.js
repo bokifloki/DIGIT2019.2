@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export const SanoButtonWrapper = styled.button`
   padding: 10px 14px;
@@ -19,6 +19,7 @@ export const SanoButtonWrapper = styled.button`
   font-family: "Titillium Web", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
+  ${props => props.active ? `color: blue; border-color:blue;` : null}
 
   ${props =>
     props.variant === "hollow"
@@ -35,10 +36,37 @@ export const SanoButtonWrapper = styled.button`
   margin-bottom: 20px;
   `
       : null}
+
+  ${props =>
+    props.variant === "language"
+      ? `
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  outline: none;
+  border-radius: 0;
+
+      `
+      : null}
+  ${props => props.active ? `color: blue; border-color:blue;` : null}
+    :focus{
+      outline: none;
+    }
+
   transition:all 0.2s ease-in-out;
   :hover {
     background-color: transparent;
+    ${props =>
+      props.variant === "language"
+        ? `
+  color: blue;
+  border-color: blue;
 
+      `
+        : null}
     ${props =>
       props.zoomIn
         ? `
@@ -49,12 +77,8 @@ export const SanoButtonWrapper = styled.button`
   }
 `;
 
-
-
-const SanoButton = (props) => {
-    return (
-        <SanoButtonWrapper {...props}/>
-    );
-}
+const SanoButton = props => {
+  return <SanoButtonWrapper {...props} />;
+};
 
 export default SanoButton;

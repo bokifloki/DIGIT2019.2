@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import Icon from "react-icons-kit";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
@@ -12,6 +12,8 @@ import {
   SideBarContainer,
   Link
 } from "./Header.scmp";
+import SanoButton from "../SanoButton/SanoButton";
+import { LanguageContext } from "../../utils/LanguageContext";
 
 function Hamburger({ clickHandler }) {
   return (
@@ -32,6 +34,16 @@ function Logo() {
   );
 }
 
+function LanguageSelect(){
+  const {language, setLanguage} = useContext(LanguageContext)
+
+  return <div>
+    <span>Lang: </span>
+    <SanoButton active={language === "eng"} onClick={()=>setLanguage('eng')} variant="language">eng</SanoButton>
+    <SanoButton active={language === "mk"} onClick={()=>setLanguage('mk')} variant="language">mk</SanoButton>
+  </div>
+}
+
 function NavBar({ setShowSidebar }) {
   return (
     <NavBarContainer>
@@ -49,6 +61,8 @@ function NavBar({ setShowSidebar }) {
       <Link border to="volunteer">
         Get Involved
       </Link>
+
+      <LanguageSelect />
 
       <Hamburger clickHandler={() => setShowSidebar(true)} />
     </NavBarContainer>
