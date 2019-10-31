@@ -11,7 +11,7 @@ import {LanguageContext} from '../../utils/LanguageContext'
 
 const Homepage = () => {
 
-  const {language, setLanguage }= useContext(LanguageContext)
+  const {language}= useContext(LanguageContext)
 
   const homepageContent = content[language].homepage
 
@@ -22,10 +22,6 @@ const Homepage = () => {
     <>
       
       <Hero img={illustration} cHeight={600} content={<WelcomeContent content={welcomeContent} />}/>
-      <div>
-        <button onClick={()=>{setLanguage('eng'); console.log('clicked')}} >Angliski</button>
-        <button onClick={()=>setLanguage('mk')}> Makedonski</button>
-      </div>
       <Hero
         cHeight={500}
         linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
