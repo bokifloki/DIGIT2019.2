@@ -8,7 +8,7 @@ function ContactUS() {
       <Formik
         initialValues={{
           fullName: "",
-          email: "",
+          emailInput: "",
           subject: "",
           message: ""
         }}
@@ -16,7 +16,7 @@ function ContactUS() {
           fullName: Yup.string().required("Не внесовте име"),
           subject: Yup.string().required("Не внесовте тема"),
           message: Yup.string().required("Не внесовте порака"),
-          email: Yup.string()
+          emailInput: Yup.string()
             .email("Внесовте неправлен email")
             .required("Не внесовте email")
         })}
@@ -66,19 +66,19 @@ function ContactUS() {
 
                     <div className="col-md-6">
                       <div className="md-form mb-0">
-                        <label htmlFor="email" className="">
-                          Вашиот email
-                        </label>
+                        <label htmlFor="emailInput">Вашиот email</label>
                         <Field
-                          name="email"
+                          name="emailInput"
                           type="text"
                           className={
                             "form-control" +
-                            (errors.email && touched.email ? " is-invalid" : "")
+                            (errors.emailInput && touched.emailInput
+                              ? " is-invalid"
+                              : "")
                           }
                         />
                         <ErrorMessage
-                          name="email"
+                          name="emailInput"
                           component="div"
                           className="invalid-feedback"
                         />
@@ -119,6 +119,7 @@ function ContactUS() {
                           Вашата порака
                         </label>
                         <Field
+                          row="3"
                           type="text"
                           id="message"
                           name="message"
