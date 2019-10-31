@@ -162,7 +162,7 @@ function ContactUS() {
 
                   <li>
                     <i className="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>contact@mdbootstrap.com</p>
+                    <p>contact email</p>
                   </li>
                 </ul>
               </div>

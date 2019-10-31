@@ -77,15 +77,6 @@ const Volunteer = () => {
       <div>
         <FormModule></FormModule>
       </div>
-
-      <Hero
-        cHeight={500}
-        img={people}
-        content={<MessageContainer></MessageContainer>}
-      />
-      <Explanation />
-      <Testimonials />
-      <ShortAboutUs />
     </>
   );
 };
