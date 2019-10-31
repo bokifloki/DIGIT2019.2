@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { createContext, useState } from "react";
 
-import SanoApp from './SanoApp'
+import SanoApp from "./SanoApp";
+import {LanguageContext} from './utils/LanguageContext'
 
 function App() {
+  const [language, setLanguage] = useState('eng');
   return (
     <>
-    <SanoApp />
+      <LanguageContext.Provider value={{language, setLanguage}}>
+        <SanoApp />
+      </LanguageContext.Provider>
     </>
   );
 }

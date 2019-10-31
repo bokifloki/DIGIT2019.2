@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useContext} from "react";
 import content from '../../utils/content'
 import Hero from "../Hero/Hero";
 import Map from "../Map/Map";
@@ -7,15 +7,16 @@ import WelcomeContent from "./components/WelcomeContent";
 import StatisticInformation from "./components/StatisticInformation";
 import TestimonialContent from "./components/TestimonialContent";
 
+import {LanguageContext} from '../../utils/LanguageContext'
+
 const Homepage = () => {
 
-  const [language, setLanguage] = useState('eng');
+  const {language, setLanguage }= useContext(LanguageContext)
 
   const homepageContent = content[language].homepage
 
   const {testimonialContent, statisticInformation, welcomeContent,} = homepageContent
   const {illustration, people} = homepageContent.resources.images
-
 
   return (
     <>
