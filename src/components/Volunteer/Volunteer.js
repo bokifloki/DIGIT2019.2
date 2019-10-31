@@ -1,176 +1,119 @@
 import React from "react";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import Icon from "react-icons-kit";
+import { playCircleO } from "react-icons-kit/fa/playCircleO";
+import FormModule from "./Form";
 
-function Volunteer() {
+import {
+  HeroContainer,
+  MessageContainer,
+  CTAButton,
+  H1
+} from "./Volunteer.scmp.js";
+const illustration =
+  "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/hero-large-27870530f60dba9eb6f828d938dda6f1.jpg";
+
+const people =
+  "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/water-crisis-large-048145ec31eeb4be77749ea35680b6d3.jpg";
+
+const sprite =
+  "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-saturn-5a8595e0d8f85155761f87bf3d8ef574.png";
+function HeroImg({ src, alt, linearGrad }) {
+  const heroImgStyles = {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover"
+  };
+
+  const heroLinearGradStyle = {
+    width: "100%",
+    height: "100%",
+    backgroundImage: linearGrad
+  };
+  if (linearGrad) {
+    return <div style={heroLinearGradStyle}></div>;
+  }
+  return <img style={heroImgStyles} src={src} alt={alt}></img>;
+}
+
+function Message({ content }) {
+  return content;
+}
+
+function Hero({ img, content, cHeight, linearGrad }) {
   return (
-    <>
-      <Formik
-        initialValues={{
-          fullName: "",
-          email: "",
-          subject: "",
-          message: ""
-        }}
-        validationSchema={Yup.object().shape({
-          fullName: Yup.string().required("Не внесовте име"),
-          subject: Yup.string().required("Не внесовте тема"),
-          message: Yup.string().required("Не внесовте порака"),
-          email: Yup.string()
-            .email("Внесовте неправлен email")
-            .required("Не внесовте email")
-        })}
-        onSubmit={fields => {
-          console.log(JSON.parse(JSON.stringify(fields, null, 4)));
-          // alert("SUCCESS!! :-)\n\n" + JSON.stringify(fields, null, 4));
-        }}
-        render={({ errors, status, touched }) => (
-          <section
-            className="mb-4"
-            style={{ padding: "20%", paddingTop: "50px" }}
-          >
-            <h2 className="h1-responsive font-weight-bold text-center my-4">
-              Contact us
-            </h2>
-
-            <p className="text-center w-responsive mx-auto mb-5">
-              Do you have any questions? Please do not hesitate to contact us
-              directly. Our team will come back to you within a matter of hours
-              to help you.
-            </p>
-
-            <div className="row">
-              <div className="col-md-9 mb-md-0 mb-5">
-                <Form id="contact-form" name="contact-form" method="POST">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="md-form mb-0">
-                        <label htmlFor="fullName">Вашето име</label>
-                        <Field
-                          name="fullName"
-                          type="text"
-                          className={
-                            "form-control" +
-                            (errors.fullName && touched.fullName
-                              ? " is-invalid"
-                              : "")
-                          }
-                        />
-                        <ErrorMessage
-                          name="fullName"
-                          component="div"
-                          className="invalid-feedback"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-md-6">
-                      <div className="md-form mb-0">
-                        <label htmlFor="email" className="">
-                          Вашиот email
-                        </label>
-                        <Field
-                          name="email"
-                          type="text"
-                          className={
-                            "form-control" +
-                            (errors.email && touched.email ? " is-invalid" : "")
-                          }
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component="div"
-                          className="invalid-feedback"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="md-form mb-0">
-                        <label htmlFor="subject" className="">
-                          Тема
-                        </label>
-                        <Field
-                          type="text"
-                          id="subject"
-                          name="subject"
-                          className={
-                            "form-control" +
-                            (errors.subject && touched.subject
-                              ? " is-invalid"
-                              : "")
-                          }
-                        ></Field>
-                        <ErrorMessage
-                          name="subject"
-                          component="div"
-                          className="invalid-feedback"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="md-form">
-                        <label htmlFor="message" className="">
-                          Вашата порака
-                        </label>
-                        <Field
-                          type="text"
-                          id="message"
-                          name="message"
-                          className={
-                            "form-control" +
-                            (errors.message && touched.message
-                              ? " is-invalid"
-                              : "")
-                          }
-                        ></Field>
-                        <ErrorMessage
-                          name="message"
-                          component="div"
-                          className="invalid-feedback"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center text-md-left">
-                    <button type="submit" className="btn btn-primary">
-                      Испрати
-                    </button>
-                  </div>
-                </Form>
-                <div className="status"></div>
-              </div>
-
-              <div className="col-md-3 text-center">
-                <ul className="list-unstyled mb-0">
-                  <li>
-                    <i className="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Скопје, Центар, Македонија</p>
-                  </li>
-
-                  <li>
-                    <i className="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
-                  </li>
-
-                  <li>
-                    <i className="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>contact@mdbootstrap.com</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        )}
-      />
-    </>
+    <HeroContainer cHeight={cHeight}>
+      <HeroImg src={img} linearGrad={linearGrad} alt="bgImg" />
+      <Message content={content} />
+    </HeroContainer>
   );
 }
+
+function ShortAboutUs() {
+  return <div></div>;
+}
+
+function Explanation() {
+  return <div></div>;
+}
+
+function Testimonials() {
+  return <div></div>;
+}
+
+const Volunteer = () => {
+  return (
+    <>
+      <Hero
+        img={illustration}
+        content={
+          <MessageContainer>
+            <h1>Сакам да волонтирам</h1>
+            <p>
+              For people in developing countries, clean water can change
+              everything.
+            </p>
+            <CTAButton>
+              <Icon icon={playCircleO} size={20}></Icon> Watch our video
+            </CTAButton>
+          </MessageContainer>
+        }
+      />
+      <FormModule></FormModule>
+      <Hero
+        cHeight={500}
+        linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
+        content={
+          <MessageContainer>
+            <H1 bgImg={sprite}>
+              663 million people in the world live without clean water
+            </H1>
+            <p>
+              That’s nearly 1 in 10 people worldwide. Or, twice the population
+              of the United States. The majority live in isolated rural areas
+              and spend hours every day walking to collect water for their
+              family. Not only does walking for water keep children out of
+              school or take up time that parents could be using to earn money,
+              but the water often carries diseases that can make everyone sick.
+            </p>
+            <br />
+            <p>
+              But access to clean water means education, income and health -
+              especially for women and kids.
+            </p>
+          </MessageContainer>
+        }
+      />
+
+      <Hero
+        cHeight={500}
+        img={people}
+        content={<MessageContainer></MessageContainer>}
+      />
+      <Explanation />
+      <Testimonials />
+      <ShortAboutUs />
+    </>
+  );
+};
 
 export default Volunteer;
