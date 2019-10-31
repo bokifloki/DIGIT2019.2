@@ -34,14 +34,28 @@ function Logo() {
   );
 }
 
-function LanguageSelect(){
-  const {language, setLanguage} = useContext(LanguageContext)
+function LanguageSelect({color}) {
+  const { language, setLanguage } = useContext(LanguageContext);
 
-  return <div>
-    <span>Lang: </span>
-    <SanoButton active={language === "eng"} onClick={()=>setLanguage('eng')} variant="language">eng</SanoButton>
-    <SanoButton active={language === "mk"} onClick={()=>setLanguage('mk')} variant="language">mk</SanoButton>
-  </div>
+  return (
+    <div>
+      <span style={{color}}>Lang: </span>
+      <SanoButton
+        active={language === "eng"}
+        onClick={() => setLanguage("eng")}
+        variant="language"
+      >
+        eng
+      </SanoButton>
+      <SanoButton
+        active={language === "mk"}
+        onClick={() => setLanguage("mk")}
+        variant="language"
+      >
+        mk
+      </SanoButton>
+    </div>
+  );
 }
 
 function NavBar({ setShowSidebar }) {
@@ -52,7 +66,9 @@ function NavBar({ setShowSidebar }) {
         <Link to="about-us">About Us</Link>
         <Link to="gallery">Gallery</Link>
         <Link to="contact-us">Contact Us</Link>
-        <Link marginright={50} to="projects">Projects</Link>
+        <Link marginright={50} to="projects">
+          Projects
+        </Link>
       </div>
 
       <Link border to="donate">
@@ -61,8 +77,9 @@ function NavBar({ setShowSidebar }) {
       <Link border to="volunteer">
         Get Involved
       </Link>
-
-      <LanguageSelect />
+      <div className="surround">
+        <LanguageSelect />
+      </div>
 
       <Hamburger clickHandler={() => setShowSidebar(true)} />
     </NavBarContainer>
@@ -103,7 +120,7 @@ function SideBar({ visible, setShowSidebar }) {
         <Link onClick={closeSidebar} to="projects">
           Projects
         </Link>
-        
+        <LanguageSelect color={'black'} />
       </div>
     </SideBarContainer>
   ) : null;
