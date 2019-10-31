@@ -68,7 +68,7 @@ function HeroFirst() {
     </div>
   );
 }
-function HeroSecond() {
+ function HeroSecond() {
   return (
     <div className={styles.donateSecondHero}>
       <div className={styles.section}>
@@ -85,7 +85,7 @@ function HeroSecond() {
   );
 }
 
-function Squares() {
+export  function Squares() {
   return (
     <div className={styles.squares}>
       <img src="https://cdn4.iconfinder.com/data/icons/medical-services-specialties-set-4/256/12-01-512.png"></img>
@@ -98,7 +98,7 @@ function Squares() {
   );
 }
 
-function HeroThird() {
+export function HeroThird() {
   return (
     <div className={styles.donateThirdHero}>
       <div className={styles.thirdContent}>
@@ -111,7 +111,7 @@ function HeroThird() {
   );
 }
 
-function Donations() {
+export default function Donations() {
   return (
     <div>
       <HeroFirst></HeroFirst>
@@ -121,5 +121,4 @@ function Donations() {
   );
 }
 
-export default Donations;
 
