@@ -18,9 +18,7 @@ const SanoApp = () => {
         <Homepage path="/" />
         {/* <AboutUs /> */}
         <Events path="events" />
-        <Donations path="donations" />
-        <ContactUs path="contact-us" />
-        <Volunteer path="volunteer" />
+        <Donations path="donate" />
         <PageNotFound default />
       </Router>
     </>
