@@ -3,25 +3,6 @@ import Hero from "../Hero/Hero";
 
 import { HeroSplitContainer } from "./HeroSplit.scmp";
 
-function HeroImg({ src, alt, linearGrad }) {
-  const heroImgStyles = {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover"
-  };
-
-  const heroLinearGradStyle = {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    backgroundImage: linearGrad
-  };
-  if (linearGrad) {
-    return <div style={heroLinearGradStyle}></div>;
-  }
-  return <img style={heroImgStyles} src={src} alt={alt}></img>;
-}
-
 function HeroSplit({
   img,
   linearGrad,
