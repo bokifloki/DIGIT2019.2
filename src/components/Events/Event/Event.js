@@ -110,7 +110,7 @@ export default function Event({ event }) {
             variant="h5"
             component="h2"
           >
-            <span className={styles.date}>
+            <div className={styles.date}>
               {difference > 0 ? (
                 <Timer initialTime={difference} direction="backward">
                   {() => (
@@ -125,7 +125,7 @@ export default function Event({ event }) {
               ) : (
                 <div> {event.date} </div>
               )}
-            </span>
+            </div>
           </Typography>
           <h4>Event title:{event.title} </h4>
           <div className={classes.location}>

@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.date {
+  margin-left: 0;
+}
+
 h3 {
   color: rgb(83, 75, 75);
   padding: 5px;
