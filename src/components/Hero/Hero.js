@@ -26,7 +26,7 @@ export default function Hero({
   img,
   linearGrad,
   bgColor,
-  content,
+  content = <> </>,
   cHeight,
   horisontalPosition
 }) {
@@ -39,3 +39,6 @@ export default function Hero({
     </HeroContainer>
   );
 }
+
+
+// eslint-disable-next-line no-unused-expressions
