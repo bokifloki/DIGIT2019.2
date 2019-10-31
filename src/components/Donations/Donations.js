@@ -117,8 +117,9 @@ function Donations() {
       <HeroFirst></HeroFirst>
       <HeroSecond></HeroSecond>
       <HeroThird></HeroThird>
-    </div>
++    </div>
   );
 }
 
 export default Donations;
+
