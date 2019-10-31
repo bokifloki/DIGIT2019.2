@@ -68,7 +68,7 @@ function HeroFirst() {
     </div>
   );
 }
-function HeroSecond() {
+ function HeroSecond() {
   return (
     <div className={styles.donateSecondHero}>
       <div className={styles.section}>
@@ -111,7 +111,7 @@ export function HeroThird() {
   );
 }
 
-function Donations() {
+export default function Donations() {
   return (
     <div>
       <HeroFirst></HeroFirst>
@@ -121,5 +121,4 @@ function Donations() {
   );
 }
 
-export default Donations;
 
