@@ -111,8 +111,6 @@ const Homepage = () => {
       <Hero
         img={illustration}
         cHeight={600}
-        horisontalPosition="rightMost"
-
         content={
           <>
             <h1>Why Water?</h1>
@@ -127,7 +125,6 @@ const Homepage = () => {
         }
       />
       <Hero
-        koloni={true}
         cHeight={500}
         linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
         content={
