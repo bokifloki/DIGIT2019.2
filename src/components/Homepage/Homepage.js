@@ -6,6 +6,7 @@ import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import Hero from "../Hero/Hero";
+import HeroSplit from "../HeroSplit/HeroSplit";
 import { MessageContainer } from "../Hero/Hero.scmp";
 import {
   CTAButton,
@@ -123,6 +124,15 @@ const Homepage = () => {
             </CTAButton>
           </>
         }
+      />
+      <HeroSplit 
+        cHeight={500}
+        leftContent={<>Hello</>}          
+        rightContent={<>Goodbye</>} 
+        lLinearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
+        lhp="rightMost"
+        rhp="leftMost"
+        rImg={illustration}
       />
       <Hero
         cHeight={500}
