@@ -7,6 +7,8 @@ import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import Hero from "../Hero/Hero";
 import Map from "../Map/Map";
+import SanoButton from "../SanoButton/SanoButton";
+import Footer from "../Footer/Footer";
 import HeroSplit from "../HeroSplit/HeroSplit";
 import { MessageContainer } from "../Hero/Hero.scmp";
 import {
@@ -14,7 +16,6 @@ import {
   TestimonialsContainer,
   TestimonialContainer,
   H1,
-  SanoButton
 } from "./Homepage.scmp";
 const illustration =
   "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/hero-large-27870530f60dba9eb6f828d938dda6f1.jpg";
@@ -126,10 +127,10 @@ const Homepage = () => {
           </>
         }
       />
-      <HeroSplit 
+      <HeroSplit
         cHeight={500}
-        leftContent={<>Hello</>}          
-        rightContent={<>Goodbye</>} 
+        leftContent={<>Hello</>}
+        rightContent={<>Goodbye</>}
         lLinearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
         lhp="rightMost"
         rhp="leftMost"
@@ -173,7 +174,7 @@ const Homepage = () => {
           <>
             <H1 bgImg={sprite2}>Your can have a huge impact</H1>
             <Testimonials testimonials={testimonials} />
-            <SanoButton position="left" variant="hollow" zoomIn={true}>
+            <SanoButton position="right" variant="hollow" zoomIn={true}>
               Learn More
             </SanoButton>
           </>
