@@ -40,10 +40,7 @@ function NavBar({ setShowSidebar }) {
         <Link to="about-us">About Us</Link>
         <Link to="gallery">Gallery</Link>
         <Link to="contact-us">Contact Us</Link>
-        <Link to="projects">Projects</Link>
-        <Link marginright={50} to="events">
-          Events
-        </Link>
+        <Link marginright={50} to="projects">Projects</Link>
       </div>
 
       <Link border to="donate">
@@ -92,9 +89,7 @@ function SideBar({ visible, setShowSidebar }) {
         <Link onClick={closeSidebar} to="projects">
           Projects
         </Link>
-        <Link onClick={closeSidebar} to="events">
-          Events
-        </Link>
+        
       </div>
     </SideBarContainer>
   ) : null;
