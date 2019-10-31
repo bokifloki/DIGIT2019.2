@@ -57,6 +57,12 @@ export const LogoContainer = styled.div`
     font-family: Helvetica, sans-serif;
     text-transform: uppercase;
   }
+
+  img{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+  }
 `;
 
 export const HamburgerContainer = styled.div`
