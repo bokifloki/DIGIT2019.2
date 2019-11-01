@@ -3,7 +3,6 @@ import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
-
 export default {
   mk: {
     aboutus: {
@@ -18,46 +17,46 @@ export default {
             icon: picture,
             color: "red",
             heading:
-              "In Africa alone, women spend 40 billion hours a year walking for water.",
+              "Само во Африка, жените поминуваат 40 милијарди часови годишно одење за вода.",
             quote:
-              "Access to clean water gives communities more time to grow food, earn an income, and go to school -- all of which fight poverty.",
-            person: "List [Member]",
-            title: "Time"
+              "Пристапот до чиста вода им дава на заедниците повеќе време да растат храна, да заработат приходи и да одат на училиште - сето тоа се бори против сиромаштијата.",
+            person: "Лист [Член]",
+            title: "Време"
           },
           {
             icon: microsoft,
             color: "blue",
             heading:
-              "Diseases from dirty water kill more people every year than all forms of violence, including war.",
+              "Болестите од валканата вода убиваат повеќе луѓе секоја година од сите форми на насилство, вклучително и војна.",
             quote:
-              "43% of those deaths are children under five years old. Access to clean water and basic sanitation can save around 16,000 lives every week.",
-            person: "Maria [Volunteer]",
-            title: "Health"
+              "43% од овие смртни случаи се деца под пет години. Пристапот до чиста вода и основните санитарни услови може да спаси околу 16,000 животи секоја недела.",
+            person: "Марија [Волонтер]",
+            title: "Здравје"
           },
           {
             icon: twitter,
             color: "green",
             heading:
-              "Women are responsible for 72% of the water collected in Sub-Saharan Africa.",
+              "Жените се одговорни за 72% од водата собрана во Субсахарска Африка.",
             quote:
-              "When a community gets water, women and girls get their lives back. They start businesses, improve their homes, and take charge of their own futures.",
-            person: "Bill [Member]",
-            title: "Empowerment"
+              "Кога заедницата ќе добие вода, жените и девојките си го враќаат животот. Тие започнуваат бизниси, ги подобруваат своите домови и ја преземаат одговорноста за својата иднина.",
+            person: "Бил [Член]",
+            title: "Зајакнување"
           },
           {
             icon: apple,
             color: "yellow",
-            heading: "Clean water helps keep kids in school, especially girls.",
+            heading: "Чистата вода помага да ги задржите децата на училиште, особено девојчињата.",
             quote:
               "Less time collecting water means more time in class. Clean water and proper toilets at school means teenage girls don’t have to stay home for a week out of every month.",
-            person: "George [Volunteer]",
-            title: "Education"
+            person: "Џорџ [Волонтер]",
+            title: "Едукација"
           }
         ],
         heading: "",
         sprite:
           "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-mars-cec3617ae7bd18a8baf716974ea51ca2.png",
-        h1: "Your can have a huge impact",
+        h1: "Вие може да имате огромно влијание",
         buttonText: "Learn More"
       },
       statisticInformation: {
