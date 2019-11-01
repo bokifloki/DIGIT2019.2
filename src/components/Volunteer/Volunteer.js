@@ -4,8 +4,9 @@ import { playCircleO } from "react-icons-kit/fa/playCircleO";
 import FormModule from "./Form";
 import Hero from "../Hero/Hero";
 import { MessageContainer } from "./Volunteer.scmp.js";
-const illustration =
-  "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/hero-large-27870530f60dba9eb6f828d938dda6f1.jpg";
+import volunteerImg from "./volunteer.png";
+
+const illustration = volunteerImg;
 
 const people =
   "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/water-crisis-large-048145ec31eeb4be77749ea35680b6d3.jpg";
@@ -18,18 +19,17 @@ const Volunteer = () => {
     <>
       <Hero
         img={illustration}
-        cHeight={600}
         content={
           <MessageContainer>
             <h1>Сакам да волонтирам</h1>
             <p>
-              For people in developing countries, clean water can change
-              everything.
+              За децата заболени од малигни болести, вашата помош може да смени
+              сé.
             </p>
           </MessageContainer>
         }
       />
-      <Hero linearGrad={"linear-gradient(rgb(235, 234, 214), rgb(168, 185, 181))"} content={<FormModule />} />
+      <Hero linearGrad={"#EEEEEE, #EEEEEE"} content={<FormModule />} />
     </>
   );
 };
