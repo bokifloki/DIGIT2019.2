@@ -21,6 +21,11 @@ const Homepage = () => {
   return (
     <>
       <Hero img={illustration} cHeight={600} content={<WelcomeContent content={welcomeContent} />}/>
+      <HeroSplit 
+      lImg="https://cdn.pixabay.com/photo/2016/08/06/14/11/money-1574450_960_720.png"
+      lImgSize="contain"
+      rightContent={<h1>Hello</h1>}
+      />
       <Hero
         cHeight={500}
         linearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
