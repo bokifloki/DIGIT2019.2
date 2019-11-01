@@ -1,39 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./AboutUs.module.css";
-import { Squares, HeroThird } from "../Donations/Donations";
-// import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-// import "./Tabs.css";
-import { fontSize } from "@material-ui/system";
+import Hero from "../Hero/Hero";
+import Squares from "../Squares/Squares";
+import content from "../../utils/content";
 
-function AboutSecondHero() {
-    return (
-      <div className={styles.aboutFirstHero}>
-        <div className={styles.section}>
+import SanoButton from "../SanoButton/SanoButton";
+import { LanguageContext } from "../../utils/LanguageContext";
+
+function AboutUs() {
+  const { language } = useContext(LanguageContext);
+  const aboutusContent = content[language].aboutus;
+
+  const { heroImg, firstHero, squares } = aboutusContent;
+  const { h1, p, buttonText } = firstHero;
+
+  return (
+    <div>
+      <Hero
+        img={heroImg}
+        horisontalPosition="rightMost"
+        content={
           <div className={styles.aboutFirstHeroContent}>
-            <h1>Join The Spring to invest in clean water and sustainability.</h1>
-            <p>
-              Give monthly, and you’ll become a part of The Spring, a passionate
-              community invested in a world where everyone has clean water.
-            </p>
-            <button>Learn More</button>
+            <h1>{h1}</h1>
+            <p>{p}</p>
+            <SanoButton variant="cta">{buttonText}</SanoButton>
           </div>
-        </div>
-      </div>
-    );
-  }
+        }
+      />
 
-
-
-function AboutUs(){
-    return(
-
-        <div>
-            <AboutSecondHero></AboutSecondHero>
-            <HeroThird></HeroThird>
-            <AboutSecondHero></AboutSecondHero>
-            <AboutSecondHero></AboutSecondHero>
-
-        </div>
-    );
+      <Hero
+        img="#"
+        cHeight={400}
+        content={
+          <>
+            <Squares squares={squares} />
+          </>
+        }
+      />
+    </div>
+  );
 }
 export default AboutUs;

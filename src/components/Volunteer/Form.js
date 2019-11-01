@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import SanoButton from "../SanoButton/SanoButton";
 
 function FormModule() {
   return (
@@ -27,18 +28,14 @@ function FormModule() {
         render={({ errors, status, touched }) => (
           <div
             style={{
-              marginBottom: "0px",
-              backgroundImage:
-                "linear-gradient(rgb(168, 185, 181), rgb(235, 234, 214))"
+              marginBottom: "0px"
             }}
           >
-            <section
-              className=""
-              style={{ padding: "20%", paddingTop: "50px" }}
-            >
+            <div>
               <h2 className="h1-responsive font-weight-bold text-center my-4">
                 Пријави се
               </h2>
+<<<<<<< HEAD
               <div>
                 <div className="row">
                   <div className="col-md-9 mb-md-0 mb-5">
@@ -63,6 +60,32 @@ function FormModule() {
                               className="invalid-feedback"
                             />
                           </div>
+=======
+
+              <div className="row">
+                <div className="col-md-9 mb-md-0 mb-5 mx-auto">
+                  <Form id="contact-form" name="contact-form" method="POST">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="md-form mb-0">
+                          <label htmlFor="fullName">Вашето име</label>
+                          <Field
+                            name="fullName"
+                            type="text"
+                            style={{ color: "red" }}
+                            className={
+                              "form-control" +
+                              (errors.fullName && touched.fullName
+                                ? " is-invalid"
+                                : "")
+                            }
+                          />
+                          <ErrorMessage
+                            name="fullName"
+                            component="div"
+                            className="invalid-feedback"
+                          />
+>>>>>>> master
                         </div>
 
                         <div className="col-md-6">
@@ -115,17 +138,20 @@ function FormModule() {
                         </div>
                       </div>
 
-                      <div className="text-center text-md-left">
-                        <button type="submit" className="btn btn-primary">
-                          Испрати
-                        </button>
-                      </div>
-                    </Form>
-                    <div className="status"></div>
-                  </div>
+                    <div className="text-center text-md-left">
+                      <SanoButton
+                        variant="cta"
+                        children="Испрати"
+                        color="black"
+                        hoverColor="black"
+                        padding="12px 24px"
+                      />
+                    </div>
+                  </Form>
+                  <div className="status"></div>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         )}
       />
