@@ -152,12 +152,17 @@ export function HeroThird() {
 }
 
 export default function Donations() {
+
+  console.log(donateImg)
   return (
     <div style={{paddingTop:"60px"}}>
       {/* <HeroFirst></HeroFirst> */}
       <HeroSplit
-      lImg={donateImg}
-      lImgSize="contain"
+      //  lImg={donateImg}
+       lImgSize="contain"
+       leftContent={
+         <div style={{width: '100%', height: '300px'}}><img style={{width:'100%', height: '100%', objectFit:'contain'}} src={donateImg} alt='e'></img></div>
+       }
         rightContent={
           <DonationWindow />
         }

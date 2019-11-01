@@ -92,8 +92,12 @@ function NavBar({ setShowSidebar, content }) {
   );
 }
 
-function SideBar({ visible, setShowSidebar }) {
+function SideBar({ visible, setShowSidebar, content }) {
+  const { menuLinks, engageButtons } = content;
+
   const closeSidebar = () => setShowSidebar(false);
+  const { language, setLanguage } = useContext(LanguageContext);
+
   return visible ? (
     <SideBarContainer>
       <div>
@@ -102,30 +106,23 @@ function SideBar({ visible, setShowSidebar }) {
         </div>
       </div>
       <div className="linksContainer">
-        <Link onClick={closeSidebar} to="/">
-          Home
-        </Link>
-        <Link onClick={closeSidebar} to="donate">
-          Donate
-        </Link>
-        <Link onClick={closeSidebar} to="volunteer">
-          Volunteer
-        </Link>
-        <Link onClick={closeSidebar} to="articles">
-          Articles
-        </Link>
-        <Link onClick={closeSidebar} to="about-us">
-          About Us
-        </Link>
-        <Link onClick={closeSidebar} to="gallery">
-          Gallery
-        </Link>
-        <Link onClick={closeSidebar} to="contact-us">
-          Contact Us
-        </Link>
-        <Link onClick={closeSidebar} to="projects">
-          Projects
-        </Link>
+        <>
+          {menuLinks.map(link => {
+            return (
+              <Link onClick={closeSidebar} to={link.path}>
+                {link.name}
+              </Link>
+            );
+          })}
+          {engageButtons.map(eB => {
+            return (
+              <Link onClick={closeSidebar} to={eB.path}>
+                {eB.name}
+              </Link>
+            );
+          })}
+        </>
+
         <LanguageSelect color={"black"} />
       </div>
     </SideBarContainer>
@@ -144,7 +141,11 @@ const Header = () => {
     <HeaderContainer>
       <Logo use="image" content={logoContent} />
       <NavBar setShowSidebar={setShowSidebar} content={navbarContent} />
-      <SideBar visible={showSidebar} setShowSidebar={setShowSidebar} />
+      <SideBar
+        visible={showSidebar}
+        setShowSidebar={setShowSidebar}
+        content={navbarContent}
+      />
     </HeaderContainer>
   );
 };
