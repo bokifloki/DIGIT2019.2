@@ -16,6 +16,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { borderRadius } from "@material-ui/system";
+import SanoButton from "../../SanoButton/SanoButton";
 
 const useStyles = makeStyles({
   card: {
@@ -137,16 +138,13 @@ export default function Event({ event }) {
           </div>
 
           <div className={styles.container}>{event.overview}</div>
-          <ColorButton
-            variant="contained"
-            color="secondary"
-            className={classes.button}
-          >
+
+          <SanoButton variant="cta" color="white">
             Join the event
-          </ColorButton>
+          </SanoButton>
         </CardContent>
         <div className={classes.imgDiv}>
-          <img src={img1} className={classes.img}></img>
+          <img src={img1} className={classes.img} alt="sreka"></img>
         </div>
       </Card>
     </div>

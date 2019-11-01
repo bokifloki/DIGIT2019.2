@@ -17,6 +17,7 @@ export const MessageContainer = styled.div`
   transform: translate(-50%, -40%);
   box-sizing: border-box;
   min-width:430px;
+  width:80%;
 
   ${props =>
     props.horisontalPosition === "left"
