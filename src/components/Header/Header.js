@@ -4,6 +4,7 @@ import Icon from "react-icons-kit";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
 import { bars } from "react-icons-kit/fa/bars";
 import content from "../../utils/content";
+import logo from "./logo.png";
 
 import {
   HeaderContainer,
@@ -33,7 +34,7 @@ function Logo({ use, content }) {
     <Link to="/">
       <LogoContainer>
         {use === "icon" && <Icon size={30} icon={icon}></Icon>}
-        {use === "image" && <img src={logoImage} alt="logo" />}
+        {use === "image" && <img src={logo} alt="logo" />}
         <div className="ngoName">{buttonText}</div>
       </LogoContainer>
     </Link>

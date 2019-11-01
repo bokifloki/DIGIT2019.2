@@ -3,17 +3,15 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import SanoButton from "../SanoButton/SanoButton";
 
-import content from '../../utils/content'
-import {LanguageContext} from '../../utils/LanguageContext'
-
+import content from "../../utils/content";
+import { LanguageContext } from "../../utils/LanguageContext";
 
 function ContactUS() {
+  const { language } = useContext(LanguageContext);
+  const contactusContent = content[language].contactus;
 
-  const {language}= useContext(LanguageContext)
-  const contactusContent = content[language].contactus
-  
-  const {form, h2, p, address, location, phone, mail} = contactusContent
-  const {errorText, inputs} = form
+  const { form, h2, p, address, location, phone, mail } = contactusContent;
+  const { errorText, inputs } = form;
 
   return (
     <>
@@ -42,12 +40,10 @@ function ContactUS() {
             style={{ padding: "20%", paddingTop: "50px" }}
           >
             <h2 className="h1-responsive font-weight-bold text-center my-4">
-              {h2}
+              Исконтактирај не
             </h2>
 
-            <p className="text-center w-responsive mx-auto mb-5">
-              {p}
-            </p>
+            <p className="text-center w-responsive mx-auto mb-5">{p}</p>
 
             <div className="row">
               <div className="col-md-9 mb-md-0 mb-5">
@@ -150,7 +146,13 @@ function ContactUS() {
                   </div>
 
                   <div className="text-center text-md-left">
-                  <SanoButton variant="cta" children={inputs.buttonText} color="black" hoverColor="black" padding="12px 24px" />
+                    <SanoButton
+                      variant="cta"
+                      children={inputs.buttonText}
+                      color="black"
+                      hoverColor="black"
+                      padding="12px 24px"
+                    />
                   </div>
                 </Form>
                 <div className="status"></div>
