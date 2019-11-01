@@ -128,6 +128,29 @@ button:hover {
   color: white;
 } */
 
+.amount {
+  margin: 3px;	  margin: 3px;
+  min-width: 120px;	  width: 115px;
+  height: 45px;	  height: 45px;
+  padding: 2px 4px;	  padding: 2px 4px;
+  border-radius: 7px;	  border-radius: 4px;
+  border: none;	  border: none;
+  background-color:rgb(252, 241, 241); 	  background-color:#e9eae4; 
+  color: #9b9b94;;	  color: #9b9b94;
+  font-weight: 500;	  font-weight: 500;
+  border: none;
+
+  border: 0.5px solid #c2c2bd; 
+}	
+
+.amount:hover {
+  background-color:#F4F5EF; 
+  /* color: white;	 */
+} 
+
+.amount:focus{
+  outline: none;
+}
 .gridButtons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -144,23 +167,30 @@ button:hover {
   left: 5px;
   color: #474747;
 }
-
 .dollarInput input {
-  width: 98%;
-  height: 93%;
-  font-size: 15px;
-  text-align: center;
-  margin-left: 3px;
-  border: 1.5px solid lightgrey;
-  border-radius: 4px;
-  background-color: ;
-}
+  width: 98%;	  width: 98%;
+  height: 93%;	  margin-top: 4px;
+  height: 87%;
+  font-size: 15px;	  font-size: 15px;
+  text-align: center;	  text-align: center;
+  margin-left: 3px;	  margin-left: 3px;
+  border: 1.5px solid lightgrey;	  border: 1.5px solid lightgrey;
+  border-radius: 4px;	  border-radius: 4px;
+  background-color: ;	}
+.dollarInput input:focus {
+  outline: none;
+}	
 
 .donateButton {
-  margin-top: 20px;
-  width: 99%;
-  background-color: #369ff4;
-  color: #fff;
+  padding: 12px 4px;
+  border-radius: 4px;
+  margin-top: 20px;	  margin-top: 20px;
+  width: 99%;	  width: 99%;
+  background-color: #369ff4;	  background-color: #369ff4;
+  color: #fff;	  color: #fff;
+}	
+.donateButton:focus{
+  outline: none;
 }
 
 @media (max-width: 915px) {
