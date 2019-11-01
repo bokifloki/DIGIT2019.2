@@ -54,12 +54,13 @@ export const SanoButtonWrapper = styled.button`
 
     :focus{
       outline: none;
+      
     }
     ${props => (props.zoomIn ? " transition:all 0.2s ease-in-out;" : null)}
     ${props =>
-      props.variant === "cta" ? " transition:all 0.2s ease-in-out;" : null}
+      props.variant === "cta" ? " transition:all 0.2s ease-in-out; font-weight:600; padding: 8px 14px; margin: 6px;" : null}
 
- 
+      ${props => props.color ? `color: ${props.color}` : null}
   :hover {
     ${props =>
       props.variant === "cta"

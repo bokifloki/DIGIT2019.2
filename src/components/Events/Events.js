@@ -22,7 +22,7 @@ const mainDiv = {
 
 const header = {
   fontFamily: "sans-serif",
-  color: "rgb(83, 75, 75)",
+  color: "black",
   textAlign: "center"
 };
 
@@ -75,7 +75,7 @@ export default function Events() {
   return (
     <div style={mainDiv}>
       <div style={container}>
-        <h2 style={header}>Upcoming and past events</h2>
+        <h2 style={header}>Our Events</h2>
         <br></br>
         <EventList events={events} />
       </div>
