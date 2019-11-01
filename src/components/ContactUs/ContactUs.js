@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import SanoButton from "../SanoButton/SanoButton";
 
+import content from '../../utils/content'
+import {LanguageContext} from '../../utils/LanguageContext'
+
+
 function ContactUS() {
+
+  const {language}= useContext(LanguageContext)
+  const contactusContent = content[language].contactus
+  
+  const {form, h2, p, address, location, phone, mail} = contactusContent
+  const {errorText, inputs} = form
+
   return (
     <>
       <Formik
@@ -14,12 +25,12 @@ function ContactUS() {
           message: ""
         }}
         validationSchema={Yup.object().shape({
-          fullName: Yup.string().required("Не внесовте име"),
-          subject: Yup.string().required("Не внесовте тема"),
-          message: Yup.string().required("Не внесовте порака"),
+          fullName: Yup.string().required(errorText.fullName),
+          subject: Yup.string().required(errorText.subject),
+          message: Yup.string().required(errorText.message),
           emailInput: Yup.string()
-            .email("Внесовте неправлен email")
-            .required("Не внесовте email")
+            .email(errorText.emailInput.email)
+            .required(errorText.emailInput.required)
         })}
         onSubmit={fields => {
           console.log(JSON.parse(JSON.stringify(fields, null, 4)));
@@ -31,13 +42,11 @@ function ContactUS() {
             style={{ padding: "20%", paddingTop: "50px" }}
           >
             <h2 className="h1-responsive font-weight-bold text-center my-4">
-              Contact us
+              {h2}
             </h2>
 
             <p className="text-center w-responsive mx-auto mb-5">
-              Do you have any questions? Please do not hesitate to contact us
-              directly. Our team will come back to you within a matter of hours
-              to help you.
+              {p}
             </p>
 
             <div className="row">
@@ -46,7 +55,7 @@ function ContactUS() {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="md-form mb-0">
-                        <label htmlFor="fullName">Вашето име</label>
+                        <label htmlFor="fullName">{inputs.fullName}</label>
                         <Field
                           name="fullName"
                           type="text"
@@ -67,7 +76,7 @@ function ContactUS() {
 
                     <div className="col-md-6">
                       <div className="md-form mb-0">
-                        <label htmlFor="emailInput">Вашиот email</label>
+                        <label htmlFor="emailInput">{inputs.email}</label>
                         <Field
                           name="emailInput"
                           type="text"
@@ -91,7 +100,7 @@ function ContactUS() {
                     <div className="col-md-12">
                       <div className="md-form mb-0">
                         <label htmlFor="subject" className="">
-                          Тема
+                          {inputs.subject}
                         </label>
                         <Field
                           type="text"
@@ -117,7 +126,7 @@ function ContactUS() {
                     <div className="col-md-12">
                       <div className="md-form">
                         <label htmlFor="message" className="">
-                          Вашата порака
+                          {inputs.message}
                         </label>
                         <Field
                           row="3"
@@ -141,7 +150,7 @@ function ContactUS() {
                   </div>
 
                   <div className="text-center text-md-left">
-                  <SanoButton variant="cta" children="Испрати" color="black" hoverColor="black" padding="12px 24px" />
+                  <SanoButton variant="cta" children={inputs.buttonText} color="black" hoverColor="black" padding="12px 24px" />
                   </div>
                 </Form>
                 <div className="status"></div>
@@ -151,17 +160,17 @@ function ContactUS() {
                 <ul className="list-unstyled mb-0">
                   <li>
                     <i className="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Скопје, Центар, Македонија</p>
+                    <p>{location}</p>
                   </li>
 
                   <li>
                     <i className="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
+                    <p>{phone}</p>
                   </li>
 
                   <li>
                     <i className="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>contact@mdbootstrap.com</p>
+                    <p>{mail}</p>
                   </li>
                 </ul>
               </div>

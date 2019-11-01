@@ -149,6 +149,32 @@ export default {
       fbLink: "https://www.facebook.com/SANO-1503652413077758",
       igLink: "https://www.instagram.com/sano.ngo",
       buttonText: "Дознај Повеќе"
+    },
+    contactus:{
+      h2:"",
+      p:"",
+      form: {
+        errorText: {
+          fullName: "Ne vnesovte ime",
+          subject:"Ne vnesovte tema",
+          message:"Ne vnesovte poraka",
+          emailInput: {
+            email:"Vnesovte nepravilen email",
+            required:"Ne vnesovte email"
+          }
+        },
+        inputs: {
+          fullName:"Vaseto ime",
+          email:"Vasiot email",
+          message:"Vasata poraka",
+          subject: "Tema",
+          buttonText:"Isprati"
+        }
+      },
+      address: "Oktomvriska Revolucija 32/15",
+      location: "Skopje, Macedonia 1000",
+      phone: "+ 01 234 567 89",
+      mail: "infosano@yahoo.com",
     }
   },
   eng: {
@@ -297,6 +323,33 @@ export default {
       fbLink: "https://www.facebook.com/SANO-1503652413077758",
       igLink: "https://www.instagram.com/sano.ngo",
       buttonText: "Learn More"
+    },
+    contactus:{
+      h2:"",
+      p:"",
+      form: {
+        errorText: {
+          fullName: "Ne vnesovte ime",
+          subject:"Ne vnesovte tema",
+          message:"Ne vnesovte poraka",
+          emailInput: {
+            email:"Vnesovte nepravilen email",
+            required:"Ne vnesovte email"
+          }
+        },
+        inputs: {
+          fullName:"Vaseto ime",
+          email:"Vasiot email",
+          message:"Vasata poraka",
+          subject: "Tema",
+          buttonText:"Isprati"
+        }
+      },
+      address: "Oktomvriska Revolucija 32/15",
+      location: "Skopje, Macedonia 1000",
+      phone: "+ 01 234 567 89",
+      mail: "infosano@yahoo.com",
     }
+
   }
 };
