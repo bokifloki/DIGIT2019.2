@@ -23,12 +23,12 @@ function DonationsAmount({ donationAmounts, m,  selected, setSelected }) {
           {donationAmounts.map((donation, index) => {
 
             if(selected === donation) {
-              return <button key={index} style={{backgroundColor: '#369ff4', color:'white'}} onClick={()=>setSelected(donation)}>
+              return <button className={styles.amount} key={index} style={{backgroundColor: '#369ff4', color:'white'}} onClick={()=>setSelected(donation)}>
               ${donation}
               {m ? "/мес" : null}{" "}
             </button>
             }
-           return <button key={index} onClick={()=>setSelected(donation)}>
+           return <button className={styles.amount} key={index} onClick={()=>setSelected(donation)}>
               ${donation}
               {m ? "/мес" : null}{" "}
             </button>
