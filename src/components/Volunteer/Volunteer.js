@@ -18,6 +18,7 @@ const Volunteer = () => {
     <>
       <Hero
         img={illustration}
+        cHeight={600}
         content={
           <MessageContainer>
             <h1>Сакам да волонтирам</h1>

@@ -24,7 +24,7 @@ function HeroImg({ src, alt, linearGrad ,size}) {
   if (linearGrad) {
     return <div style={heroLinearGradStyle}></div>;
   }
-  return <img style={heroImgStyles} src={src} alt={""}></img>;
+  return <img style={heroImgStyles} src={src} alt={"test"}></img>;
 }
 function Message({ content }) {
   return content;

@@ -11,8 +11,8 @@ export const HeroSplitContainer = styled.div`
     props.src
       ? `background: url(${props.src});  
       background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;`
+     background-position: center;
+      background-size: cover;`
       : null}
   ${props =>
     props.linearGrad

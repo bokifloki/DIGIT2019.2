@@ -150,31 +150,31 @@ export default {
       igLink: "https://www.instagram.com/sano.ngo",
       buttonText: "Дознај Повеќе"
     },
-    contactus:{
-      h2:"",
-      p:"",
+    contactus: {
+      h2: "",
+      p: "",
       form: {
         errorText: {
           fullName: "Ne vnesovte ime",
-          subject:"Ne vnesovte tema",
-          message:"Ne vnesovte poraka",
+          subject: "Ne vnesovte tema",
+          message: "Ne vnesovte poraka",
           emailInput: {
-            email:"Vnesovte nepravilen email",
-            required:"Ne vnesovte email"
+            email: "Vnesovte nepravilen email",
+            required: "Ne vnesovte email"
           }
         },
         inputs: {
-          fullName:"Vaseto ime",
-          email:"Vasiot email",
-          message:"Vasata poraka",
+          fullName: "Vaseto ime",
+          email: "Vasiot email",
+          message: "Vasata poraka",
           subject: "Tema",
-          buttonText:"Isprati"
+          buttonText: "Isprati"
         }
       },
       address: "Oktomvriska Revolucija 32/15",
       location: "Skopje, Macedonia 1000",
       phone: "+ 01 234 567 89",
-      mail: "infosano@yahoo.com",
+      mail: "infosano@yahoo.com"
     }
   },
   eng: {
@@ -324,32 +324,49 @@ export default {
       igLink: "https://www.instagram.com/sano.ngo",
       buttonText: "Learn More"
     },
-    contactus:{
-      h2:"",
-      p:"",
+    contactus: {
+      h2: "",
+      p: "",
       form: {
         errorText: {
           fullName: "Ne vnesovte ime",
-          subject:"Ne vnesovte tema",
-          message:"Ne vnesovte poraka",
+          subject: "Ne vnesovte tema",
+          message: "Ne vnesovte poraka",
           emailInput: {
-            email:"Vnesovte nepravilen email",
-            required:"Ne vnesovte email"
+            email: "Vnesovte nepravilen email",
+            required: "Ne vnesovte email"
           }
         },
         inputs: {
-          fullName:"Vaseto ime",
-          email:"Vasiot email",
-          message:"Vasata poraka",
+          fullName: "Vaseto ime",
+          email: "Vasiot email",
+          message: "Vasata poraka",
           subject: "Tema",
-          buttonText:"Isprati"
+          buttonText: "Isprati"
         }
       },
       address: "Oktomvriska Revolucija 32/15",
       location: "Skopje, Macedonia 1000",
       phone: "+ 01 234 567 89",
-      mail: "infosano@yahoo.com",
+      mail: "infosano@yahoo.com"
+    },
+    gallery: {
+      images: {
+        img1:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/71905663_2298646186911706_7998509868694634496_n.jpg?_nc_cat=100&_nc_oc=AQlNC7rLU4oCs1dn9NRCyJV-h2_s82OCUJ71LUOOjuGrFs5Y_NnSXJnzlHq5OdBSN6Y&_nc_ht=scontent-sof1-1.xx&oh=ed5671e7a4386cd159fae1135a468710&oe=5E5CCB4D",
+        img2:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/72295125_2298617896914535_1352948903359545344_n.jpg?_nc_cat=110&_nc_oc=AQkXVp8crkhzWLhuWm2_fgjMXYac2ik5GivOcOVN7yjSLBz0j5X8x40BPLNte2j2_wk&_nc_ht=scontent-sof1-1.xx&oh=b867c4a262e9879b8008638c796621eb&oe=5E1B265B",
+        img3:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/69381743_2219973771445615_311384471830003712_n.jpg?_nc_cat=100&_nc_oc=AQmCO-0_NklMT3Sf8dqC2FDUAEbYU41rcIISNBEYzaLBJScq2DXsW3O3YTWxMZ5EX7s&_nc_ht=scontent-sof1-1.xx&oh=05bb5cd9d04eb4b86989baf168765743&oe=5E19063A",
+        img4:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/66806386_2140648796044780_213745459871612928_n.jpg?_nc_cat=110&_nc_oc=AQmy_j5kEw5Fdc9O424R-2lu9GY7-PKTlIIDdiBmWeq_ZtK3ZKjyfqycOfB2wNvEjNE&_nc_ht=scontent-sof1-1.xx&oh=fd54ce91ba120c2226143436c20c997b&oe=5E64C586",
+        img5:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/66448203_2140648392711487_2867048673336885248_n.jpg?_nc_cat=110&_nc_oc=AQkdRpxXblWWo2QOeYd1zd4Wx4nBGxRGcDpnGzSwPD2vi2IHxl_oyda8fsCalVqzK2g&_nc_ht=scontent-sof1-1.xx&oh=e8c6009174339d096b934996ab1e2b70&oe=5E17C82D",
+        img6:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/60294938_2045188615590799_5650627083932532736_n.jpg?_nc_cat=105&_nc_oc=AQmXgRf51uE4HIv6b4LfukCxIJwgmP0X6LotTWwCGrHBHDP6V3hUpu7JawY-C_KEtdw&_nc_ht=scontent-sof1-1.xx&oh=6c0b10b95527f1972f66621c593108f0&oe=5E4DB5DB",
+        img7:
+          "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/45371619_1774104149365915_4682688003993239552_n.jpg?_nc_cat=107&_nc_oc=AQlYd9rLPnLHu7z_uwlIuziOhvVpAMOW8MBlXkN3QhEvwvTrk6Ur5e2nfyGXLuK1dfg&_nc_ht=scontent-sof1-1.xx&oh=570770d580e097336f2cd680e4114072&oe=5E533DA9"
+      }
     }
-
   }
 };
