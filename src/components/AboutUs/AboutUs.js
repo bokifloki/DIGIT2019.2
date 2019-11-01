@@ -11,6 +11,7 @@ import { twitter } from "react-icons-kit/ikons/twitter";
 // import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 // import "./Tabs.css";
 import { fontSize } from "@material-ui/system";
+import SanoButton from "../SanoButton/SanoButton";
 
 function AboutSecondHero() {
   return (
@@ -22,13 +23,12 @@ function AboutSecondHero() {
             Give monthly, and you’ll become a part of The Spring, a passionate
             community invested in a world where everyone has clean water.
           </p>
-          <button>Learn More</button>
+          <SanoButton variant="cta">Learn More</SanoButton>
         </div>
       </div>
     </div>
   );
 }
-
 
 function AboutUs() {
   const squares = [
@@ -62,11 +62,25 @@ function AboutUs() {
     }
   ];
 
- 
-
   return (
     <div>
-      <AboutSecondHero></AboutSecondHero>
+      <Hero
+        img="https://d26p6gt0m19hor.cloudfront.net/assets/donations/general/the-spring-background-4a0669e65a1c0d601de41b2598e23d21.jpg"
+        horisontalPosition="rightMost"
+        content={
+          <div className={styles.aboutFirstHeroContent}>
+            <h1>
+              Join The Spring to invest in clean water and sustainability.
+            </h1>
+            <p>
+              Give monthly, and you’ll become a part of The Spring, a passionate
+              community invested in a world where everyone has clean water.
+            </p>
+            <SanoButton variant="cta">Learn More</SanoButton>
+          </div>
+        }
+      />
+
       <Hero
         img="#"
         cHeight={400}
@@ -76,7 +90,6 @@ function AboutUs() {
           </>
         }
       />
-      <AboutSecondHero></AboutSecondHero>
     </div>
   );
 }
