@@ -8,10 +8,10 @@ import Squares from "../Squares/Squares";
 import donateImg from "./money.png";
 import SanoButton from "../SanoButton/SanoButton";
 
-import { playCircleO } from "react-icons-kit/fa/playCircleO";
-import { picture } from "react-icons-kit/ikons/picture";
-import { microsoft } from "react-icons-kit/ikons/microsoft";
-import { twitter } from "react-icons-kit/ikons/twitter";
+import {heart} from 'react-icons-kit/ikons/heart'
+import {home} from 'react-icons-kit/ikons/home'
+import {ic_face} from 'react-icons-kit/md/ic_face'
+import {ic_insert_emoticon} from 'react-icons-kit/md/ic_insert_emoticon'
 
 function DonationsAmount({ donationAmounts, m, selected, setSelected }) {
   return (
@@ -115,36 +115,35 @@ function HeroSecond() {
 export function HeroThird() {
   const donationSquares = [
     {
-      icon: picture,
-      heading: "Share your support",
+      icon: ic_face,
+      heading: "Донеси среќа",
       content:
-        "Support one of our many fundraisers raising money for cancer awareness.",
-      link: "Send support"
+        "Вашите донации допринесуваат децата да имаат причина да се среќни."
     },
     {
-      icon: twitter,
-      heading: "Share your supportg",
+      icon: home,
+      heading: "Изгради дом",
       content:
-        "Support one of our many fundraisers raising money for cancer awareness.",
-      link: "Send support"
+        "Вашите донации обезбедуваат сигурен дом, исполнет со љубов и топла прегратка.",
+     
     },
     {
-      icon: playCircleO,
-      heading: "Share your supportd",
+      icon: heart,
+      heading: "Пружи љубов",
       content:
-        "Support one of our many fundraisers raising money for cancer awareness.",
-      link: "Send support"
+        "Вашите донации пружаат неизмерна љубов кон целото САНО семејство.",
+     
     },
     {
-      icon: microsoft,
-      heading: "Share your supports",
+      icon: ic_insert_emoticon,
+      heading: "Изнуди насмевки",
       content:
-        "Support one of our many fundraisers raising money for cancer awareness.",
-      link: "Send support"
+        "Биди причина за изнудени насмевки кои го спојуваат САНО како семејство.",
+      
     }
   ];
   return (
-    <div className={styles.donateThirdHero}>
+    <div className={styles.donateHeroThird}>
       <div className={styles.thirdContent}>
         <Squares squares={donationSquares}></Squares>
       </div>
@@ -154,25 +153,13 @@ export function HeroThird() {
 
 export default function Donations() {
   return (
-    <div>
-      <HeroFirst></HeroFirst>
+    <div style={{paddingTop:"60px"}}>
+      {/* <HeroFirst></HeroFirst> */}
       <HeroSplit
       lImg={donateImg}
       lImgSize="contain"
         rightContent={
-          <div className={styles.section}>
-            <div className={styles.sectionRight}>
-              <h1>
-                Join The Spring to invest in clean water and sustainability.
-              </h1>
-              <p>
-                Give monthly, and you’ll become a part of The Spring, a
-                passionate community invested in a world where everyone has
-                clean water.
-              </p>
-              <button>Learn More</button>
-            </div>
-          </div>
+          <DonationWindow />
         }
       />
       <HeroThird></HeroThird>+{" "}

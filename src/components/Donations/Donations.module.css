@@ -7,10 +7,8 @@
   font-family: sans-serif;
 }
 .donateSecondHero {
-  background: url(./money.png);
   background-repeat: no-repeat;
   background-size: 50%;
-  padding-left: 15px;
   min-height: 960px;
   font-family: sans-serif;
 }
@@ -35,12 +33,12 @@
   background-color: #fff;
   font-family: sans-serif;
   height: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .thirdContent {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  
   align-items: center;
   text-align: center;
   width: 80%;
@@ -80,9 +78,7 @@
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   border-top: none;
-  padding: 20px 12px;
-  box-sizing: border-box;
-  /* border: 1px solid #bebeba; */
+  border: 1px solid #bebeba;
 }
 .amountHeading h4 {
   background-color: #f4f5f0;
@@ -90,7 +86,6 @@
   padding: 15px;
   text-align: center;
   color: #484747;
-  font-weight: 500;
   border: 3px thin #b8b8b3;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
@@ -115,24 +110,22 @@
   text-align: center;
 }
 
-.amount {
+button {
   margin: 3px;
-  width: 115px;
+  min-width: 120px;
   height: 45px;
   padding: 2px 4px;
-  border-radius: 4px;
+  border-radius: 7px;
   border: none;
-  background-color:#e9eae4; 
-  color: #9b9b94;
+  background-color:rgb(252, 241, 241); 
+  color: #9b9b94;;
   font-weight: 500;
+  border: 0.5px solid #c2c2bd;
 }
 
-.amount:hover {
-  background-color:#F4F5EF; 
-}
-
-.amount:focus{
-  outline: none;
+button:hover {
+  background-color: #369ff4;
+  color: white;
 }
 
 .gridButtons {
@@ -154,28 +147,20 @@
 
 .dollarInput input {
   width: 98%;
-  margin-top: 4px;
-  height: 87%;
+  height: 93%;
   font-size: 15px;
   text-align: center;
   margin-left: 3px;
   border: 1.5px solid lightgrey;
   border-radius: 4px;
-}
-.dollarInput input:focus {
-  outline: none;
+  background-color: ;
 }
 
 .donateButton {
-  padding: 12px 4px;
-  border-radius: 4px;
   margin-top: 20px;
   width: 99%;
   background-color: #369ff4;
   color: #fff;
-}
-.donateButton:focus{
-  outline: none;
 }
 
 @media (max-width: 915px) {
@@ -186,4 +171,6 @@
   .donateRight {
     margin: 0 auto;
   }
+
 }
+

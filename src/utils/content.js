@@ -4,6 +4,7 @@ import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
+import {heart} from 'react-icons-kit/ikons/heart'
 
 export default {
   mk: {
@@ -11,39 +12,38 @@ export default {
       heroImg:
         "https://d26p6gt0m19hor.cloudfront.net/assets/donations/general/the-spring-background-4a0669e65a1c0d601de41b2598e23d21.jpg",
       firstHero: {
-        h1: "Join The Spring to invest in clean water and sustainability.",
-        p: `Give monthly, and you’ll become a part of The Spring, a passionate
-        community invested in a world where everyone has clean water.`,
-        buttonText: "Learn More"
+        h1: "Кој е САНО ?",
+        p: `Ние сме родители и пријатели на децата лекувани од рак и нивните семејства, соединети во мисија за подробрување на квалитетот на лекување и животот на заболените деца и нивните родители.`,
+        buttonText: "Дознај Повеќе"
       },
       squares: [
         {
-          icon: picture,
-          heading: "Share your support",
+          icon: heart,
+          // heading: "Share your support",
           content:
-            "Support one of our many fundraisers raising money for cancer awareness.",
-          link: "Send support"
+            "Обезбедуваме подобри услови на хемато-онколошкото оддление на Клиниката за детски болести во Скопје, ги едуцираме родителите, децата, медицинскиот персонал, волонтерите и пошироката јавност.",
+          
         },
         {
-          icon: twitter,
-          heading: "Share your supportg",
+          icon: heart,
+          // heading: "Share your supportg",
           content:
-            "Support one of our many fundraisers raising money for cancer awareness.",
-          link: "Send support"
+            "На секое дете заболено од рак, мора да му биде достапнo најдоброто можно лекување и нега, психосоцијална поддршка на целото семејство за да може полесно да го помине долготрајното, болно и мачно лекување.",
+         
         },
         {
-          icon: playCircleO,
-          heading: "Share your supportd",
+          icon: heart,
+          // heading: "Share your supportd",
           content:
-            "Support one of our many fundraisers raising money for cancer awareness.",
-          link: "Send support"
+            "Унапредувањето на квалитетот на лекување и животот на децата заболени од рак во Македонија е заедничка мисија за сите нас, во која секој може да допринесе на свој начин.",
+          
         },
         {
-          icon: microsoft,
-          heading: "Share your supports",
+          icon: heart,
+          // heading: "Share your supports",
           content:
-            "Support one of our many fundraisers raising money for cancer awareness.",
-          link: "Send support"
+            "Многу е важно континуирано да се залагаме за правата на децата и нивните семејства, уважувајќи ги различностите и почитувајќи ја посебноста на секој поединец.",
+         
         }
       ]
     },
@@ -155,20 +155,20 @@ export default {
       p:"",
       form: {
         errorText: {
-          fullName: "Ne vnesovte ime",
-          subject:"Ne vnesovte tema",
-          message:"Ne vnesovte poraka",
+          fullName: "Не внесовте име",
+          subject:"Не внесовте тема",
+          message:"Не внесовте порака",
           emailInput: {
-            email:"Vnesovte nepravilen email",
-            required:"Ne vnesovte email"
+            email:"Внесовте неправилен емаил",
+            required:"Не внесовте емаил"
           }
         },
         inputs: {
-          fullName:"Vaseto ime",
-          email:"Vasiot email",
-          message:"Vasata poraka",
-          subject: "Tema",
-          buttonText:"Isprati"
+          fullName:"Вашето име",
+          email:"Вашиот емаил",
+          message:"Вашата порака",
+          subject: "Тема",
+          buttonText:"Испрати"
         }
       },
       address: "Oktomvriska Revolucija 32/15",
