@@ -14,12 +14,12 @@
 
   .aboutFirstHeroContent{
     max-width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    margin:  auto;
-    text-align: center;
+    display: inline-block;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* margin:  auto; */
+    /* text-align: center; */
   }
 
   .aboutFirstHeroContent h1{

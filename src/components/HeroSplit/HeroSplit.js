@@ -4,6 +4,8 @@ import Hero from "../Hero/Hero";
 import { HeroSplitContainer } from "./HeroSplit.scmp";
 
 function HeroSplit({
+  lImgSize,
+  rImgSize,
   img,
   linearGrad,
   cHeight,
@@ -25,12 +27,14 @@ function HeroSplit({
         noBg={noBg}
         cHeight={cHeight}
         content={leftContent}
+        size={lImgSize}
         img={lImg}
         bgColor={lBgColor}
         linearGrad={lLinearGrad}
         horisontalPosition={lhp}
       />
       <Hero
+        size={rImgSize}
         noBg={noBg}
         cHeight={cHeight}
         content={rightContent}
