@@ -105,7 +105,7 @@ function HeroFirst() {
           <DonationWindow />
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 function HeroSecond() {
