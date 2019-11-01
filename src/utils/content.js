@@ -4,7 +4,7 @@ import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
-import {heart} from 'react-icons-kit/ikons/heart'
+import { heart } from "react-icons-kit/ikons/heart";
 
 export default {
   mk: {
@@ -21,29 +21,25 @@ export default {
           icon: heart,
           // heading: "Share your support",
           content:
-            "Обезбедуваме подобри услови на хемато-онколошкото оддление на Клиниката за детски болести во Скопје, ги едуцираме родителите, децата, медицинскиот персонал, волонтерите и пошироката јавност.",
-          
+            "Обезбедуваме подобри услови на хемато-онколошкото оддление на Клиниката за детски болести во Скопје, ги едуцираме родителите, децата, медицинскиот персонал, волонтерите и пошироката јавност."
         },
         {
           icon: heart,
           // heading: "Share your supportg",
           content:
-            "На секое дете заболено од рак, мора да му биде достапнo најдоброто можно лекување и нега, психосоцијална поддршка на целото семејство за да може полесно да го помине долготрајното, болно и мачно лекување.",
-         
+            "На секое дете заболено од рак, мора да му биде достапнo најдоброто можно лекување и нега, психосоцијална поддршка на целото семејство за да може полесно да го помине долготрајното, болно и мачно лекување."
         },
         {
           icon: heart,
           // heading: "Share your supportd",
           content:
-            "Унапредувањето на квалитетот на лекување и животот на децата заболени од рак во Македонија е заедничка мисија за сите нас, во која секој може да допринесе на свој начин.",
-          
+            "Унапредувањето на квалитетот на лекување и животот на децата заболени од рак во Македонија е заедничка мисија за сите нас, во која секој може да допринесе на свој начин."
         },
         {
           icon: heart,
           // heading: "Share your supports",
           content:
-            "Многу е важно континуирано да се залагаме за правата на децата и нивните семејства, уважувајќи ги различностите и почитувајќи ја посебноста на секој поединец.",
-         
+            "Многу е важно континуирано да се залагаме за правата на децата и нивните семејства, уважувајќи ги различностите и почитувајќи ја посебноста на секој поединец."
         }
       ]
     },
@@ -108,8 +104,9 @@ export default {
         p2: `Пристапноста до чиста вода значи едукација, заработка и здравје / посебно за жените и децата.`
       },
       welcomeContent: {
-        h1: "Зошто водата?",
-        p: "За луѓето во земјите во разбој, чистата вода може да им смени се.",
+        h1: "Зошто САНО?",
+        p:
+          "Подробрување на квалитетот на лекување и животот на заболените деца и нивните родители.",
         buttonText: "Погледнете го видеото"
       },
       resources: {
@@ -150,31 +147,31 @@ export default {
       igLink: "https://www.instagram.com/sano.ngo",
       buttonText: "Дознај Повеќе"
     },
-    contactus:{
-      h2:"",
-      p:"",
+    contactus: {
+      h2: "",
+      p: "",
       form: {
         errorText: {
           fullName: "Не внесовте име",
-          subject:"Не внесовте тема",
-          message:"Не внесовте порака",
+          subject: "Не внесовте тема",
+          message: "Не внесовте порака",
           emailInput: {
-            email:"Внесовте неправилен емаил",
-            required:"Не внесовте емаил"
+            email: "Внесовте неправилен емаил",
+            required: "Не внесовте емаил"
           }
         },
         inputs: {
-          fullName:"Вашето име",
-          email:"Вашиот емаил",
-          message:"Вашата порака",
+          fullName: "Вашето име",
+          email: "Вашиот емаил",
+          message: "Вашата порака",
           subject: "Тема",
-          buttonText:"Испрати"
+          buttonText: "Испрати"
         }
       },
       address: "Oktomvriska Revolucija 32/15",
-      location: "Skopje, Macedonia 1000",
-      phone: "+ 01 234 567 89",
-      mail: "infosano@yahoo.com",
+      location: "Скопје, Македонија 1000",
+      phone: "070 380 812",
+      mail: "infosano@yahoo.com"
     }
   },
   eng: {
@@ -324,32 +321,31 @@ export default {
       igLink: "https://www.instagram.com/sano.ngo",
       buttonText: "Learn More"
     },
-    contactus:{
-      h2:"",
-      p:"",
+    contactus: {
+      h2: "",
+      p: "",
       form: {
         errorText: {
           fullName: "Ne vnesovte ime",
-          subject:"Ne vnesovte tema",
-          message:"Ne vnesovte poraka",
+          subject: "Ne vnesovte tema",
+          message: "Ne vnesovte poraka",
           emailInput: {
-            email:"Vnesovte nepravilen email",
-            required:"Ne vnesovte email"
+            email: "Vnesovte nepravilen email",
+            required: "Ne vnesovte email"
           }
         },
         inputs: {
-          fullName:"Vaseto ime",
-          email:"Vasiot email",
-          message:"Vasata poraka",
+          fullName: "Vaseto ime",
+          email: "Vasiot email",
+          message: "Vasata poraka",
           subject: "Tema",
-          buttonText:"Isprati"
+          buttonText: "Isprati"
         }
       },
       address: "Oktomvriska Revolucija 32/15",
       location: "Skopje, Macedonia 1000",
       phone: "+ 01 234 567 89",
-      mail: "infosano@yahoo.com",
+      mail: "infosano@yahoo.com"
     }
-
   }
 };
