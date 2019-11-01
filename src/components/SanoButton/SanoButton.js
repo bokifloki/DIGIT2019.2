@@ -19,7 +19,7 @@ export const SanoButtonWrapper = styled.button`
   font-family: "Titillium Web", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
-  ${props => (props.active ? `color: blue; border-color:blue;` : null)}
+  ${props => (props.active ? `color: blue;` : null)}
 
   ${props =>
     props.variant === "hollow"
@@ -50,7 +50,7 @@ export const SanoButtonWrapper = styled.button`
   border-radius: 0;
       `
       : null}
-  ${props => (props.active ? `color: blue; border-color:blue;` : null)}
+  ${props => (props.active ? `color: blue;` : null)}
 
     :focus{
       outline: none;
@@ -70,7 +70,7 @@ export const SanoButtonWrapper = styled.button`
         : null}
     ${props =>
       props.variant === "language"
-        ? "color:blue;border-color: blue; background-color: transparent"
+        ? "color:blue; background-color: transparent"
         : null}
     ${props => (props.zoomIn ? "transform: scale(1.1)" : null)}
   }
