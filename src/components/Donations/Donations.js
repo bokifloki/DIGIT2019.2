@@ -1,18 +1,18 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import styles from "./Donations.module.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import HeroSplit from "../HeroSplit/HeroSplit";
 import "./Tabs.css";
 import { fontSize } from "@material-ui/system";
 import Squares from "../Squares/Squares";
-
-
+import donateImg from "./money.png";
 
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
 import { picture } from "react-icons-kit/ikons/picture";
 import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 
-function DonationsAmount({ donationAmounts, m,  selected, setSelected }) {
+function DonationsAmount({ donationAmounts, m, selected, setSelected }) {
   return (
     <>
       <div className={styles.amountHeading}>
@@ -21,26 +21,31 @@ function DonationsAmount({ donationAmounts, m,  selected, setSelected }) {
       <div className={styles.buttonGrid}>
         <div className={styles.gridButtons}>
           {donationAmounts.map((donation, index) => {
-
-            if(selected === donation) {
-              return <button key={index} style={{backgroundColor: '#369ff4', color:'white'}} onClick={()=>setSelected(donation)}>
-              ${donation}
-              {m ? "/мес" : null}{" "}
-            </button>
+            if (selected === donation) {
+              return (
+                <button
+                  key={index}
+                  style={{ backgroundColor: "#369ff4", color: "white" }}
+                  onClick={() => setSelected(donation)}
+                >
+                  ${donation}
+                  {m ? "/мес" : null}{" "}
+                </button>
+              );
             }
-           return <button key={index} onClick={()=>setSelected(donation)}>
-              ${donation}
-              {m ? "/мес" : null}{" "}
-            </button>
-          }
-           
-          )}
+            return (
+              <button key={index} onClick={() => setSelected(donation)}>
+                ${donation}
+                {m ? "/мес" : null}{" "}
+              </button>
+            );
+          })}
           <div className={styles.dollarInput}>
             <span> $</span>
             <input type="number" min="5" placeholder="Внеси друга сума" />
           </div>
         </div>
-        <button className={styles.donateButton} >
+        <button className={styles.donateButton}>
           ДОНИРАЈ {m ? "МЕСЕЧНО" : null}
         </button>
       </div>
@@ -59,10 +64,19 @@ function DonationWindow() {
       </TabList>
 
       <TabPanel>
-        <DonationsAmount selected={selected} setSelected={setSelected} donationAmounts={singleDonations} />
+        <DonationsAmount
+          selected={selected}
+          setSelected={setSelected}
+          donationAmounts={singleDonations}
+        />
       </TabPanel>
       <TabPanel>
-        <DonationsAmount m  selected={selected} setSelected={setSelected} donationAmounts={monthlyDonations} />
+        <DonationsAmount
+          m
+          selected={selected}
+          setSelected={setSelected}
+          donationAmounts={monthlyDonations}
+        />
       </TabPanel>
     </Tabs>
   );
@@ -76,7 +90,9 @@ function HeroFirst() {
           <DonationWindow />
         </div>
         <div className={styles.donateRight}>
-          <h1>100% од вашите пари одат за ресурси на децата на кои им се потребни.</h1>
+          <h1>
+            100% од вашите пари одат за ресурси на децата на кои им се потребни.
+          </h1>
           <h4>
             Private donors cover our operating costs, so you can give knowing
             your whole gift will help bring clean water.
@@ -86,56 +102,41 @@ function HeroFirst() {
     </div>
   );
 }
- function HeroSecond() {
-  return (
-    <div className={styles.donateSecondHero}>
-      <div className={styles.section}>
-        <div className={styles.sectionRight}>
-          <h1>Join The Spring to invest in clean water and sustainability.</h1>
-          <p>
-            Give monthly, and you’ll become a part of The Spring, a passionate
-            community invested in a world where everyone has clean water.
-          </p>
-          <button>Learn More</button>
-        </div>
-      </div>
-    </div>
-  );
+function HeroSecond() {
+  return <div className={styles.donateSecondHero}></div>;
 }
-
-
 
 export function HeroThird() {
   const donationSquares = [
-      {
-        icon: picture,
-        heading: "Share your support",
-        content:
-          "Support one of our many fundraisers raising money for cancer awareness.",
-        link: "Send support"
-      },
-      {
-        icon: twitter,
-        heading: "Share your supportg",
-        content:
-          "Support one of our many fundraisers raising money for cancer awareness.",
-        link: "Send support"
-      },
-      {
-        icon: playCircleO,
-        heading: "Share your supportd",
-        content:
-          "Support one of our many fundraisers raising money for cancer awareness.",
-        link: "Send support"
-      },
-      {
-        icon: microsoft,
-        heading: "Share your supports",
-        content:
-          "Support one of our many fundraisers raising money for cancer awareness.",
-        link: "Send support"
-      }
-  ]
+    {
+      icon: picture,
+      heading: "Share your support",
+      content:
+        "Support one of our many fundraisers raising money for cancer awareness.",
+      link: "Send support"
+    },
+    {
+      icon: twitter,
+      heading: "Share your supportg",
+      content:
+        "Support one of our many fundraisers raising money for cancer awareness.",
+      link: "Send support"
+    },
+    {
+      icon: playCircleO,
+      heading: "Share your supportd",
+      content:
+        "Support one of our many fundraisers raising money for cancer awareness.",
+      link: "Send support"
+    },
+    {
+      icon: microsoft,
+      heading: "Share your supports",
+      content:
+        "Support one of our many fundraisers raising money for cancer awareness.",
+      link: "Send support"
+    }
+  ];
   return (
     <div className={styles.donateThirdHero}>
       <div className={styles.thirdContent}>
@@ -149,10 +150,26 @@ export default function Donations() {
   return (
     <div>
       <HeroFirst></HeroFirst>
-      <HeroSecond></HeroSecond>
-      <HeroThird></HeroThird>
-+    </div>
+      <HeroSplit
+      lImg={donateImg}
+      lImgPosition="contain"
+        rightContent={
+          <div className={styles.section}>
+            <div className={styles.sectionRight}>
+              <h1>
+                Join The Spring to invest in clean water and sustainability.
+              </h1>
+              <p>
+                Give monthly, and you’ll become a part of The Spring, a
+                passionate community invested in a world where everyone has
+                clean water.
+              </p>
+              <button>Learn More</button>
+            </div>
+          </div>
+        }
+      />
+      <HeroThird></HeroThird>+{" "}
+    </div>
   );
 }
-
-

@@ -1,5 +1,5 @@
 .donateHero {
-  background: url(https://d26p6gt0m19hor.cloudfront.net/assets/donations/eoy-2017/eoy-donate-hero-desktop-7aab380bb25f65b620f777bf1c24233b.jpg);
+  /* background: url(https://d26p6gt0m19hor.cloudfront.net/assets/donations/eoy-2017/eoy-donate-hero-desktop-7aab380bb25f65b620f777bf1c24233b.jpg); */
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 600px;
@@ -7,10 +7,11 @@
   font-family: sans-serif;
 }
 .donateSecondHero {
-  background: url(https://d26p6gt0m19hor.cloudfront.net/assets/donations/general/the-spring-background-4a0669e65a1c0d601de41b2598e23d21.jpg);
+  background: url(./money.png);
   background-repeat: no-repeat;
-  background-size: 100%;
-  min-height: 400px;
+  background-size: 50%;
+  padding-left: 15px;
+  min-height: 960px;
   font-family: sans-serif;
 }
 
