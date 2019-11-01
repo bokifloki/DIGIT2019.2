@@ -366,6 +366,15 @@ export default {
           "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/60294938_2045188615590799_5650627083932532736_n.jpg?_nc_cat=105&_nc_oc=AQmXgRf51uE4HIv6b4LfukCxIJwgmP0X6LotTWwCGrHBHDP6V3hUpu7JawY-C_KEtdw&_nc_ht=scontent-sof1-1.xx&oh=6c0b10b95527f1972f66621c593108f0&oe=5E4DB5DB",
         img7:
           "https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/45371619_1774104149365915_4682688003993239552_n.jpg?_nc_cat=107&_nc_oc=AQlYd9rLPnLHu7z_uwlIuziOhvVpAMOW8MBlXkN3QhEvwvTrk6Ur5e2nfyGXLuK1dfg&_nc_ht=scontent-sof1-1.xx&oh=570770d580e097336f2cd680e4114072&oe=5E533DA9"
+      },
+      classes:{
+        img1: 'highlight-box',
+        img2: 'highlight-box',
+        img3: "",
+        img4: "highlight-tall",
+        img5: "",
+        img6: "highlight-box",
+        img7: "highlight-tall"
       }
     }
   }
