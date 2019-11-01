@@ -20,7 +20,8 @@ function HeroSplit({
   lLinearGrad,
   lImg
 }) {
-  const noBg = Boolean(img) || Boolean(linearGrad);
+  const noBg = !Boolean(lImg) && !Boolean(lLinearGrad);
+  const noBg2 = !Boolean(rImg) && !Boolean(rLinearGrad);
   return (
     <HeroSplitContainer cHeight={cHeight} src={img} linearGrad={linearGrad}>
       <Hero
@@ -35,7 +36,7 @@ function HeroSplit({
       />
       <Hero
         size={rImgSize}
-        noBg={noBg}
+        noBg={noBg2}
         cHeight={cHeight}
         content={rightContent}
         img={rImg}

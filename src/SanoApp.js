@@ -8,6 +8,7 @@ import Donations from "./components/Donations/Donations";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Volunteer from "./components/Volunteer/Volunteer";
 import ContactUs from "./components/ContactUs/ContactUs";
+import Gallery from "./components/Gallery/Gallery";
 
 const PageNotFound = () => "Page doesnt exist";
 const SanoApp = () => {
@@ -21,6 +22,7 @@ const SanoApp = () => {
         <Donations path="donate" />
         <ContactUs path="contact-us" />
         <Volunteer path="volunteer" />
+        <Gallery path="gallery" />
         <PageNotFound default />
       </Router>
       <Footer />

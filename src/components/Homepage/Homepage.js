@@ -24,6 +24,7 @@ const Homepage = () => {
       <HeroSplit 
       lImg="https://cdn.pixabay.com/photo/2016/08/06/14/11/money-1574450_960_720.png"
       lImgSize="contain"
+      rBgColor="transparent"
       rightContent={<h1>Hello</h1>}
       />
       <Hero
