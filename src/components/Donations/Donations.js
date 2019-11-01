@@ -158,7 +158,7 @@ export default function Donations() {
       <HeroFirst></HeroFirst>
       <HeroSplit
       lImg={donateImg}
-      lImgPosition="contain"
+      lImgSize="contain"
         rightContent={
           <div className={styles.section}>
             <div className={styles.sectionRight}>
