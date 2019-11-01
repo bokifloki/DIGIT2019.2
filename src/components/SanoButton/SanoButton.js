@@ -15,6 +15,7 @@ export const SanoButtonWrapper = styled.button`
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  background-color: #f1858b;
 
   font-family: "Titillium Web", sans-serif;
   font-weight: 500;
@@ -61,12 +62,14 @@ export const SanoButtonWrapper = styled.button`
       props.variant === "cta" ? " transition:all 0.2s ease-in-out; font-weight:600; padding: 8px 14px; margin: 6px;" : null}
 
       ${props => props.color ? `color: ${props.color}` : null}
+      ${props => props.padding ? `padding: ${props.padding}` : null}
   :hover {
+
     ${props =>
       props.variant === "cta"
         ? `
       color:white;
-      background-color: #308fdb;
+      background-color: #eb525a;
     `
         : null}
     ${props =>
@@ -74,6 +77,9 @@ export const SanoButtonWrapper = styled.button`
         ? "color:blue; background-color: transparent"
         : null}
     ${props => (props.zoomIn ? "transform: scale(1.1)" : null)}
+    ${props => (props.hoverColor ? `color: ${props.hoverColor}` : null)}
+  
+
   }
 `;
 
