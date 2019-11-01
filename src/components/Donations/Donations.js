@@ -6,6 +6,7 @@ import "./Tabs.css";
 import { fontSize } from "@material-ui/system";
 import Squares from "../Squares/Squares";
 import donateImg from "./money.png";
+import SanoButton from "../SanoButton/SanoButton";
 
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
 import { picture } from "react-icons-kit/ikons/picture";
@@ -24,6 +25,7 @@ function DonationsAmount({ donationAmounts, m, selected, setSelected }) {
             if (selected === donation) {
               return (
                 <button
+                  className={styles.amount}
                   key={index}
                   style={{ backgroundColor: "#369ff4", color: "white" }}
                   onClick={() => setSelected(donation)}
@@ -34,7 +36,11 @@ function DonationsAmount({ donationAmounts, m, selected, setSelected }) {
               );
             }
             return (
-              <button key={index} onClick={() => setSelected(donation)}>
+              <button
+                className={styles.amount}
+                key={index}
+                onClick={() => setSelected(donation)}
+              >
                 ${donation}
                 {m ? "/мес" : null}{" "}
               </button>
@@ -87,9 +93,6 @@ function HeroFirst() {
     <div className={styles.donateHero}>
       <div className={styles.donateSidebyside}>
         <div className={styles.donateLeft}>
-          <DonationWindow />
-        </div>
-        <div className={styles.donateRight}>
           <h1>
             100% од вашите пари одат за ресурси на децата на кои им се потребни.
           </h1>
@@ -97,6 +100,9 @@ function HeroFirst() {
             Private donors cover our operating costs, so you can give knowing
             your whole gift will help bring clean water.
           </h4>
+        </div>
+        <div className={styles.donateRight}>
+          <DonationWindow />
         </div>
       </div>
     </div>

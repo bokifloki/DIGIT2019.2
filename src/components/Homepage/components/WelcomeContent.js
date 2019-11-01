@@ -9,7 +9,7 @@ const WelcomeContent = ({ content }) => {
     <>
       <h1>{h1}</h1>
       <p>{p}</p>
-      <SanoButton>
+      <SanoButton variant="cta">
         <Icon icon={playCircleO} size={20}></Icon> {buttonText}
       </SanoButton>
     </>
