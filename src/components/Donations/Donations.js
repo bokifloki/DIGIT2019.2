@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "./Tabs.css";
 import { fontSize } from "@material-ui/system";
 import Squares from "../Squares/Squares";
+import SanoButton from "../SanoButton/SanoButton"
 
 
 
@@ -96,7 +97,7 @@ function HeroFirst() {
             Give monthly, and you’ll become a part of The Spring, a passionate
             community invested in a world where everyone has clean water.
           </p>
-          <button>Learn More</button>
+          <SanoButton variant="cta">Learn More</SanoButton>
         </div>
       </div>
     </div>
