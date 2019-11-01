@@ -112,20 +112,7 @@ export default function Event({ event }) {
             component="h2"
           >
             <div className={styles.date}>
-              {difference > 0 ? (
-                <Timer initialTime={difference} direction="backward">
-                  {() => (
-                    <React.Fragment>
-                      <Timer.Days /> <span>days </span>
-                      <Timer.Hours /> <span>hr. </span>
-                      <Timer.Minutes /> <span>min. </span>
-                      <Timer.Seconds /> <span>sec. until the event. </span>
-                    </React.Fragment>
-                  )}
-                </Timer>
-              ) : (
-                <div> {event.date} </div>
-              )}
+              <div> {event.date} </div>
             </div>
           </Typography>
           <h4>{event.title} </h4>
