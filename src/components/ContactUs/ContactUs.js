@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import SanoButton from "../SanoButton/SanoButton";
 
 function ContactUS() {
   return (
@@ -140,9 +141,7 @@ function ContactUS() {
                   </div>
 
                   <div className="text-center text-md-left">
-                    <button type="submit" className="btn btn-primary">
-                      Испрати
-                    </button>
+                  <SanoButton variant="cta" children="Испрати" color="black" hoverColor="black" padding="12px 24px" />
                   </div>
                 </Form>
                 <div className="status"></div>

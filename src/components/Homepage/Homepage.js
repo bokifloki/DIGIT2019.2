@@ -20,7 +20,6 @@ const Homepage = () => {
 
   return (
     <>
-      
       <Hero img={illustration} cHeight={600} content={<WelcomeContent content={welcomeContent} />}/>
       <Hero
         cHeight={500}

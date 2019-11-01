@@ -2,6 +2,7 @@ import { picture } from "react-icons-kit/ikons/picture";
 import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
+import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
 
 export default {
   mk: {
@@ -82,6 +83,26 @@ export default {
           people:
             "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/water-crisis-large-048145ec31eeb4be77749ea35680b6d3.jpg"
         }
+      }
+    },
+    header: {
+      logo: {
+        icon:u1F3EE,
+        logoImage:"https://scontent.fskp2-1.fna.fbcdn.net/v/t1.0-9/29695158_1505439182899081_2428008730019178701_n.jpg?_nc_cat=100&_nc_oc=AQkFXN3Kj9wME90bH9KVi40BWiCuIfxY2gEsao8pmuJMLDr8Xbo4Ji16do9-BxZtyVk&_nc_ht=scontent.fskp2-1.fna&oh=5757160b0e6b5b9d0ab903137f290727&oe=5E18FB72",
+        buttonText:"САНО"
+      },
+      navbar: {
+        menuLinks:[
+          {path:"articles", name:"Статии"},
+          {path:"about-us", name:"За нас"},
+          {path:"gallery", name:"Галерија"},
+          {path:"contact-us", name:"Контакт"},
+          {path:"projects", name:"Проекти"},
+        ],
+        engageButtons:[
+          {path:"donate", name:"Донирај"},
+          {path:"volunteer", name:"Приклучи се"},
+        ],
       }
     }
   },
@@ -166,6 +187,26 @@ export default {
           people:
             "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/water-crisis-large-048145ec31eeb4be77749ea35680b6d3.jpg"
         }
+      }
+    },
+    header: {
+      logo: {
+        icon:u1F3EE,
+        logoImage:"https://scontent.fskp2-1.fna.fbcdn.net/v/t1.0-9/29695158_1505439182899081_2428008730019178701_n.jpg?_nc_cat=100&_nc_oc=AQkFXN3Kj9wME90bH9KVi40BWiCuIfxY2gEsao8pmuJMLDr8Xbo4Ji16do9-BxZtyVk&_nc_ht=scontent.fskp2-1.fna&oh=5757160b0e6b5b9d0ab903137f290727&oe=5E18FB72",
+        buttonText:"SANO"
+      },
+      navbar: {
+        menuLinks:[
+          {path:"articles", name:"Articles"},
+          {path:"about-us", name:"About Us"},
+          {path:"gallery", name:"Gallery"},
+          {path:"contact-us", name:"Contant Us"},
+          {path:"projects", name:"Projects"},
+        ],
+        engageButtons:[
+          {path:"donate", name:"Donate"},
+          {path:"volunteer", name:"Get Involved"},
+        ],
       }
     }
   }
