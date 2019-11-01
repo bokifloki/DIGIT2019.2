@@ -4,7 +4,7 @@ import SanoApp from "./SanoApp";
 import {LanguageContext} from './utils/LanguageContext'
 
 function App() {
-  const [language, setLanguage] = useState('eng');
+  const [language, setLanguage] = useState('mk');
   return (
     <>
       <LanguageContext.Provider value={{language, setLanguage}}>
