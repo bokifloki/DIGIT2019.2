@@ -8,8 +8,8 @@ import Donations from "./components/Donations/Donations";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Volunteer from "./components/Volunteer/Volunteer";
 import ContactUs from "./components/ContactUs/ContactUs";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 
-const PageNotFound = () => "Page doesnt exist";
 const SanoApp = () => {
   return (
     <>
@@ -17,7 +17,7 @@ const SanoApp = () => {
 
       <Router>
         <Homepage path="/" />
-        <AboutUs path="about-us"/>
+        <AboutUs path="about-us" />
         <Events path="events" />
         <Donations path="donate" />
         <ContactUs path="contact-us" />

@@ -125,10 +125,10 @@ const Homepage = () => {
           </>
         }
       />
-      <HeroSplit 
+      <HeroSplit
         cHeight={500}
-        leftContent={<>Hello</>}          
-        rightContent={<>Goodbye</>} 
+        leftContent={<>Hello</>}
+        rightContent={<>Goodbye</>}
         lLinearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
         lhp="rightMost"
         rhp="leftMost"

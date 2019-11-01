@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "react-icons-kit";
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
 import FormModule from "./Form";
+import HeroSplit from "../HeroSplit/HeroSplit";
 
 import {
   HeroContainer,
@@ -77,6 +78,16 @@ const Volunteer = () => {
       <div>
         <FormModule></FormModule>
       </div>
+      <HeroSplit
+        cHeight={500}
+        leftContent={<>test</>}
+        rightContent={<>Goodbye</>}
+        lLinearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
+        rLinearGrad={"linear-gradient(#ebead6,#a8b9b5)"}
+        lhp="rightMost"
+        rhp="leftMost"
+        //rImg={illustration}
+      />
     </>
   );
 };
