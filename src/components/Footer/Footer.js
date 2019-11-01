@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Icon from "react-icons-kit";
+import content from '../../utils/content'
 
 import { facebook_1 } from "react-icons-kit/ikons/facebook_1";
 import { instagram } from "react-icons-kit/ikons/instagram";
 import { heart } from "react-icons-kit/ikons/heart";
 import SanoButton from "../SanoButton/SanoButton";
+import { LanguageContext } from "../../utils/LanguageContext";
 
 const FooterContainer = styled.footer`
   background-color: #eee;
@@ -52,31 +54,38 @@ const SocialLinks = styled.div`
 `;
 
 const Footer = () => {
+
+  const {language}= useContext(LanguageContext)
+
+  const footerContent = content[language].footer
+
+  const {address, location, mail, fbLink, igLink ,buttonText} = footerContent;
+
   return (
     <FooterContainer>
       <div className="topWrapper">
         <Information>
-          infosano@yahoo.com <br />
-          Oktomvriska Revolucija 32/15 <br />
-          Skopje, Macedonia 1000
+          {mail}<br />
+          {address} <br />
+         {location}
         </Information>
         <SocialLinks>
           <a
-            href="https://www.facebook.com/SANO-1503652413077758/"
+            href={fbLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Icon icon={facebook_1} size={33} />
           </a>
           <a
-            href="https://www.instagram.com/sano.ngo/"
+            href={igLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Icon icon={instagram} size={33} />
           </a>
         </SocialLinks>
-        <SanoButtonExtended variant="cta">Learn More</SanoButtonExtended>
+        <SanoButtonExtended variant="cta">{buttonText}</SanoButtonExtended>
       </div>
       <Copyright>
         © 2019 SANO ORG ; Made with{" "}

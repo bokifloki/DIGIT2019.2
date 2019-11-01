@@ -3,12 +3,49 @@ import { microsoft } from "react-icons-kit/ikons/microsoft";
 import { twitter } from "react-icons-kit/ikons/twitter";
 import { apple } from "react-icons-kit/ikons/apple";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
+import { playCircleO } from "react-icons-kit/fa/playCircleO";
+
 export default {
   mk: {
     aboutus: {
-      donationsAmount: {
-        heading: "100% of your money brings resources to kids in need"
-      }
+      heroImg:
+        "https://d26p6gt0m19hor.cloudfront.net/assets/donations/general/the-spring-background-4a0669e65a1c0d601de41b2598e23d21.jpg",
+      firstHero: {
+        h1: "Join The Spring to invest in clean water and sustainability.",
+        p: `Give monthly, and you’ll become a part of The Spring, a passionate
+        community invested in a world where everyone has clean water.`,
+        buttonText: "Learn More"
+      },
+      squares: [
+        {
+          icon: picture,
+          heading: "Share your support",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        },
+        {
+          icon: twitter,
+          heading: "Share your supportg",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        },
+        {
+          icon: playCircleO,
+          heading: "Share your supportd",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        },
+        {
+          icon: microsoft,
+          heading: "Share your supports",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        }
+      ]
     },
     homepage: {
       testimonialContent: {
@@ -46,7 +83,8 @@ export default {
           {
             icon: apple,
             color: "yellow",
-            heading: "Чистата вода помага да ги задржите децата на училиште, особено девојчињата.",
+            heading:
+              "Чистата вода помага да ги задржите децата на училиште, особено девојчињата.",
             quote:
               "Less time collecting water means more time in class. Clean water and proper toilets at school means teenage girls don’t have to stay home for a week out of every month.",
             person: "Џорџ [Волонтер]",
@@ -71,8 +109,7 @@ export default {
       },
       welcomeContent: {
         h1: "Зошто водата?",
-        p:
-          "За луѓето во земјите во разбој, чистата вода може да им смени се.",
+        p: "За луѓето во земјите во разбој, чистата вода може да им смени се.",
         buttonText: "Погледнете го видеото"
       },
       resources: {
@@ -86,30 +123,74 @@ export default {
     },
     header: {
       logo: {
-        icon:u1F3EE,
-        logoImage:"https://scontent.fskp2-1.fna.fbcdn.net/v/t1.0-9/29695158_1505439182899081_2428008730019178701_n.jpg?_nc_cat=100&_nc_oc=AQkFXN3Kj9wME90bH9KVi40BWiCuIfxY2gEsao8pmuJMLDr8Xbo4Ji16do9-BxZtyVk&_nc_ht=scontent.fskp2-1.fna&oh=5757160b0e6b5b9d0ab903137f290727&oe=5E18FB72",
-        buttonText:"САНО"
+        icon: u1F3EE,
+        logoImage:
+          "https://scontent.fskp2-1.fna.fbcdn.net/v/t1.0-9/29695158_1505439182899081_2428008730019178701_n.jpg?_nc_cat=100&_nc_oc=AQkFXN3Kj9wME90bH9KVi40BWiCuIfxY2gEsao8pmuJMLDr8Xbo4Ji16do9-BxZtyVk&_nc_ht=scontent.fskp2-1.fna&oh=5757160b0e6b5b9d0ab903137f290727&oe=5E18FB72",
+        buttonText: "САНО"
       },
       navbar: {
-        menuLinks:[
-          {path:"articles", name:"Статии"},
-          {path:"about-us", name:"За нас"},
-          {path:"gallery", name:"Галерија"},
-          {path:"contact-us", name:"Контакт"},
-          {path:"projects", name:"Проекти"},
+        menuLinks: [
+          { path: "articles", name: "Статии" },
+          { path: "about-us", name: "За нас" },
+          { path: "gallery", name: "Галерија" },
+          { path: "contact-us", name: "Контакт" },
+          { path: "projects", name: "Проекти" }
         ],
-        engageButtons:[
-          {path:"donate", name:"Донирај"},
-          {path:"volunteer", name:"Приклучи се"},
-        ],
+        engageButtons: [
+          { path: "donate", name: "Донирај" },
+          { path: "volunteer", name: "Приклучи се" }
+        ]
       }
+    },
+    footer: {
+      address: "Октомвриска Револуција 32/15",
+      location: "Скопје, Македонија 1000",
+      mail: "infosano@yahoo.com",
+      fbLink: "https://www.facebook.com/SANO-1503652413077758",
+      igLink: "https://www.instagram.com/sano.ngo",
+      buttonText: "Дознај Повеќе"
     }
   },
   eng: {
     aboutus: {
-      donationsAmount: {
-        heading: "100% of your money brings resources to kids in need"
-      }
+      heroImg:
+        "https://d26p6gt0m19hor.cloudfront.net/assets/donations/general/the-spring-background-4a0669e65a1c0d601de41b2598e23d21.jpg",
+      firstHero: {
+        h1: "Join The Spring to invest in clean water and sustainability.",
+        p: `Give monthly, and you’ll become a part of The Spring, a passionate
+        community invested in a world where everyone has clean water.`,
+        buttonText: "Learn More"
+      },
+      squares: [
+        {
+          icon: picture,
+          heading: "Share your support",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        },
+        {
+          icon: twitter,
+          heading: "Share your supportg",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        },
+        {
+          icon: playCircleO,
+          heading: "Share your supportd",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        },
+        {
+          icon: microsoft,
+          heading: "Share your supports",
+          content:
+            "Support one of our many fundraisers raising money for cancer awareness.",
+          link: "Send support"
+        }
+      ]
     },
     homepage: {
       testimonialContent: {
@@ -190,23 +271,32 @@ export default {
     },
     header: {
       logo: {
-        icon:u1F3EE,
-        logoImage:"https://scontent.fskp2-1.fna.fbcdn.net/v/t1.0-9/29695158_1505439182899081_2428008730019178701_n.jpg?_nc_cat=100&_nc_oc=AQkFXN3Kj9wME90bH9KVi40BWiCuIfxY2gEsao8pmuJMLDr8Xbo4Ji16do9-BxZtyVk&_nc_ht=scontent.fskp2-1.fna&oh=5757160b0e6b5b9d0ab903137f290727&oe=5E18FB72",
-        buttonText:"SANO"
+        icon: u1F3EE,
+        logoImage:
+          "https://scontent.fskp2-1.fna.fbcdn.net/v/t1.0-9/29695158_1505439182899081_2428008730019178701_n.jpg?_nc_cat=100&_nc_oc=AQkFXN3Kj9wME90bH9KVi40BWiCuIfxY2gEsao8pmuJMLDr8Xbo4Ji16do9-BxZtyVk&_nc_ht=scontent.fskp2-1.fna&oh=5757160b0e6b5b9d0ab903137f290727&oe=5E18FB72",
+        buttonText: "SANO"
       },
       navbar: {
-        menuLinks:[
-          {path:"articles", name:"Articles"},
-          {path:"about-us", name:"About Us"},
-          {path:"gallery", name:"Gallery"},
-          {path:"contact-us", name:"Contant Us"},
-          {path:"projects", name:"Projects"},
+        menuLinks: [
+          { path: "articles", name: "Articles" },
+          { path: "about-us", name: "About Us" },
+          { path: "gallery", name: "Gallery" },
+          { path: "contact-us", name: "Contant Us" },
+          { path: "projects", name: "Projects" }
         ],
-        engageButtons:[
-          {path:"donate", name:"Donate"},
-          {path:"volunteer", name:"Get Involved"},
-        ],
+        engageButtons: [
+          { path: "donate", name: "Donate" },
+          { path: "volunteer", name: "Get Involved" }
+        ]
       }
+    },
+    footer: {
+      address: "Oktomvriska Revolucija 32/15",
+      location: "Skopje, Macedonia 1000",
+      mail: "infosano@yahoo.com",
+      fbLink: "https://www.facebook.com/SANO-1503652413077758",
+      igLink: "https://www.instagram.com/sano.ngo",
+      buttonText: "Learn More"
     }
   }
 };
