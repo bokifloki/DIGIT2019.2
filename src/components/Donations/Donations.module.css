@@ -110,7 +110,7 @@
   text-align: center;
 }
 
-button {
+/* button {
   margin: 3px;
   min-width: 120px;
   height: 45px;
@@ -126,7 +126,7 @@ button {
 button:hover {
   background-color: #369ff4;
   color: white;
-}
+} */
 
 .gridButtons {
   display: grid;
