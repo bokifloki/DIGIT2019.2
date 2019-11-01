@@ -124,10 +124,10 @@ button {
   border: 0.5px solid #c2c2bd; */
 }
 
-button:hover {
+/* button:hover {
   background-color: #369ff4;
   color: white;
-}
+} */
 
 .gridButtons {
   display: grid;

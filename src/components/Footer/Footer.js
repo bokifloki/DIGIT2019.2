@@ -76,7 +76,7 @@ const Footer = () => {
             <Icon icon={instagram} size={33} />
           </a>
         </SocialLinks>
-        <SanoButtonExtended>Learn More</SanoButtonExtended>
+        <SanoButtonExtended variant="cta">Learn More</SanoButtonExtended>
       </div>
       <Copyright>
         © 2019 SANO ORG ; Made with{" "}
