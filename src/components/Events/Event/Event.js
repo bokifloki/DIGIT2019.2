@@ -128,7 +128,7 @@ export default function Event({ event }) {
               )}
             </div>
           </Typography>
-          <h4>Event title:{event.title} </h4>
+          <h4>{event.title} </h4>
           <div className={classes.location}>
             <LocationOnIcon
               style={{ paddingLeft: "8px" }}
@@ -138,13 +138,9 @@ export default function Event({ event }) {
           </div>
 
           <div className={styles.container}>{event.overview}</div>
-
-          <SanoButton variant="cta" color="white">
-            Join the event
-          </SanoButton>
         </CardContent>
         <div className={classes.imgDiv}>
-          <img src={img1} className={classes.img} alt="sreka"></img>
+          <img src={event.image} className={classes.img} alt="sreka"></img>
         </div>
       </Card>
     </div>
