@@ -41,6 +41,7 @@ export const TestimonialsContainer = styled.div`
 export const TestimonialContainer = styled.div`
   padding: 30px;
   height: 300px;
+  ${props => props.winSize<1050 ? `height:500px;` : null}
   /* border: 1px solid blue; */
   display: flex;
 

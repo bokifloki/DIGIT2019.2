@@ -7,9 +7,9 @@ import {
     TestimonialContainer,
     H1
   } from "../Homepage.scmp";
-function Testimonial({ testimonial }) {
+function Testimonial({ testimonial, winSize }) {
     return (
-      <TestimonialContainer>
+      <TestimonialContainer winSize={winSize}>
         <div className="iconContainer">
           <Icon
             icon={testimonial.icon}
@@ -27,21 +27,21 @@ function Testimonial({ testimonial }) {
     );
   }
 
-function Testimonials({ testimonials }) {
+function Testimonials({ testimonials, winSize }) {
     return (
       <TestimonialsContainer>
         {testimonials.map(testimonial => (
-          <Testimonial key={testimonial.title} testimonial={testimonial} />
+          <Testimonial key={testimonial.title} testimonial={testimonial} winSize={winSize} />
         ))}
       </TestimonialsContainer>
     );
   }
-const TestimonialContent = ({content}) => {
+const TestimonialContent = ({content, winSize}) => {
     const {testimonials, sprite, h1, buttonText} = content;
     return (
         <>
             <H1 bgImg={sprite}>{h1}</H1>
-            <Testimonials testimonials={testimonials} />
+            <Testimonials testimonials={testimonials} winSize={winSize}/>
             <SanoButton position="left  " variant="hollow" zoomIn={true}>
               {buttonText}
             </SanoButton>

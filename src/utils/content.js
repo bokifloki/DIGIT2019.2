@@ -5,6 +5,10 @@ import { apple } from "react-icons-kit/ikons/apple";
 import { u1F3EE } from "react-icons-kit/noto_emoji_regular/u1F3EE";
 import { playCircleO } from "react-icons-kit/fa/playCircleO";
 import { heart } from "react-icons-kit/ikons/heart";
+import {u1F491} from 'react-icons-kit/noto_emoji_regular/u1F491'
+import {u1F4A1} from 'react-icons-kit/noto_emoji_regular/u1F4A1'
+import {u26BD} from 'react-icons-kit/noto_emoji_regular/u26BD'
+import {u1F6B9} from 'react-icons-kit/noto_emoji_regular/u1F6B9'
 
 export default {
   mk: {
@@ -47,51 +51,51 @@ export default {
       testimonialContent: {
         testimonials: [
           {
-            icon: picture,
-            color: "red",
+            icon: u1F491,
+            color: "#2d2d2d",
             heading:
-              "Само во Африка, жените поминуваат 40 милијарди часови годишно одење за вода.",
+              "Љубов е потрбена на сите. Во САНО може да најдете пријатели кои ќе се погрижат за Вас и ќе ви помогнат во најтешките моменти.",
             quote:
-              "Пристапот до чиста вода им дава на заедниците повеќе време да растат храна, да заработат приходи и да одат на училиште - сето тоа се бори против сиромаштијата.",
-            person: "Лист [Член]",
-            title: "Време"
+              "Откако дојдов во САНО, за првпат некој ме прифати каква штп сум ",
+              person: "Марија [Член]",
+            title: "Љубов"
           },
           {
-            icon: microsoft,
-            color: "blue",
+            icon: u1F4A1,
+            color: "#2d2d2d",
             heading:
-              "Болестите од валканата вода убиваат повеќе луѓе секоја година од сите форми на насилство, вклучително и војна.",
+              "Вниманието е значајно на сите. Па затоа ние во САНО секојпат сме тука за вас да ви помогнеме во проблемите кои ги имате",
             quote:
-              "43% од овие смртни случаи се деца под пет години. Пристапот до чиста вода и основните санитарни услови може да спаси околу 16,000 животи секоја недела.",
-            person: "Марија [Волонтер]",
-            title: "Здравје"
+              "Премногу фини се сите во САНО.",
+            person: "Стефанија [Член]",
+            title: "Внимание"
           },
           {
-            icon: twitter,
-            color: "green",
+            icon: u26BD,
+            color: "#2d2d2d",
             heading:
-              "Жените се одговорни за 72% од водата собрана во Субсахарска Африка.",
+              "Не треба никој да биде раздвоен",
             quote:
-              "Кога заедницата ќе добие вода, жените и девојките си го враќаат животот. Тие започнуваат бизниси, ги подобруваат своите домови и ја преземаат одговорноста за својата иднина.",
+              "Во САНО поминав многу време поминато во многу дружба и забава. Во ниту еден момент не се осетив осамено или пак игнорирано",
             person: "Бил [Член]",
-            title: "Зајакнување"
+            title: "Дружба"
           },
           {
-            icon: apple,
-            color: "yellow",
+            icon: u1F6B9,
+            color: "#2d2d2d",
             heading:
-              "Чистата вода помага да ги задржите децата на училиште, особено девојчињата.",
+              "Помошта е добредојдена од секаде.",
             quote:
-              "Less time collecting water means more time in class. Clean water and proper toilets at school means teenage girls don’t have to stay home for a week out of every month.",
-            person: "Џорџ [Волонтер]",
-            title: "Едукација"
+              "Не сум волонтирал претходно, но ова ми беше прекрасно искуство каде што се здружив со нови луѓе.",
+            person: "Мартин [Волонтер]",
+            title: "Волонтерство"
           }
         ],
         heading: "",
         sprite:
           "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-mars-cec3617ae7bd18a8baf716974ea51ca2.png",
         h1: "Вие може да имате огромно влијание",
-        buttonText: "Learn More"
+        buttonText: "Дознај Повеќе"
       },
       statisticInformation: {
         sprite:

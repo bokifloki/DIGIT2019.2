@@ -4,15 +4,19 @@ import styled from "styled-components";
 import Pmap from "pigeon-maps";
 import Marker from "pigeon-marker";
 import Overlay from "pigeon-overlay";
+import useWindowSize from "../../utils/useWindowSize";
 
 const MapContainer = styled.div`
     height: 420px;
+${props => props.size < 900 ? 'height: 220px;' : null}
+
     width: 100%;
 `;
 
 const Map = () => {
+  const size = useWindowSize()
   return (
-    <MapContainer>
+    <MapContainer size={size}>
       <Pmap center={[42.0050,21.4408]} zoom={12}>
         <Marker
           anchor={[42.0050,21.4408]}

@@ -29,8 +29,8 @@ function AboutUs() {
       />
 
       <Hero
-        img="#"
-        cHeight={400}
+        noBg
+        cHeight={200}
         content={
           <>
             <Squares squares={squares} />
