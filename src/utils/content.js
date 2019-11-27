@@ -16,7 +16,7 @@ export default {
       heroImg:
         "https://d26p6gt0m19hor.cloudfront.net/assets/donations/general/the-spring-background-4a0669e65a1c0d601de41b2598e23d21.jpg",
       firstHero: {
-        h1: "Кој е САНOTO ?",
+        h1: "Кој е САНO?",
         p: `Ние сме родители и пријатели на децата лекувани од рак и нивните семејства, соединети во мисија за подробрување на квалитетот на лекување и животот на заболените деца и нивните родители.`,
         buttonText: "Дознај Повеќе"
       },
