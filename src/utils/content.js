@@ -214,7 +214,7 @@ export default {
         },
         {
           icon: twitter,
-          heading: "Share your supportg",
+          heading: "",
           content:
             "Support one of our many fundraisers raising money for cancer awareness.",
           link: "Send support"
@@ -240,15 +240,15 @@ export default {
         testimonials: [
           {
             icon: picture,
-            color: "red",
+            color: "",
             heading: "",
             quote: "",
-            person: "List [Member]",
-            title: "Time"
+            person: "",
+            title: ""
           },
           {
             icon: microsoft,
-            color: "blue",
+            color: "",
             heading: "",
             quote: "",
             person: "",
@@ -264,25 +264,24 @@ export default {
           },
           {
             icon: apple,
-            color: "yellow",
-            heading: "Clean water helps keep kids in school, especially girls.",
-            quote:
-              "Less time collecting water means more time in class. Clean water and proper toilets at school means teenage girls don’t have to stay home for a week out of every month.",
-            person: "George [Volunteer]",
-            title: "Education"
+            color: "",
+            heading: "",
+            quote: "",
+            person: "",
+            title: ""
           }
         ],
         heading: "",
         sprite:
           "https://d26p6gt0m19hor.cloudfront.net/assets/static-pages/whywater/brush-mars-cec3617ae7bd18a8baf716974ea51ca2.png",
-        h1: "Your can have a huge impact",
-        buttonText: "Learn More"
+        h1: "",
+        buttonText: ""
       },
       statisticInformation: {
         sprite: "",
         h1: "",
         p1: ``,
-        p2: ` `
+        p2: ``
       },
       welcomeContent: {
         h1: "",
