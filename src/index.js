@@ -7,6 +7,8 @@ import "./index.css";
 import "jquery/dist/jquery.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+document.title = "САНО - NGO"
+
 ReactDOM.render(
   <App styles={{ border: "1px solid red" }} />,
   document.getElementById("root")
