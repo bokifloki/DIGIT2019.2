@@ -10,7 +10,7 @@
     "formik": "^2.0.3",
     "jquery": "^3.4.1",
     "mdbootstrap": "^4.8.11",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "pigeon-maps": "^0.14.0",
     "pigeon-marker": "^0.3.4",
     "pigeon-overlay": "^0.2.3",
